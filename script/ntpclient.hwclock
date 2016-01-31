@@ -1,0 +1,4 @@
+#!/bin/fish
+
+ntpclient -s -h ntp1.eonet.ne.jp
+hwclock --systohc

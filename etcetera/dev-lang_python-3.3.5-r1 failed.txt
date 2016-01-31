@@ -1,0 +1,213 @@
+>>> Emerging binary (9 of 25) dev-lang/python-3.3.5-r1
+ * python-3.3.5-r1.tbz2 MD5 SHA1 size ;-) ...                            [ ok ]
+>>> Extracting info
+>>> Extracting dev-lang/python-3.3.5-r1
+
+>>> Installing (9 of 25) dev-lang/python-3.3.5-r1
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/phase-functions.sh: line 85:  3724 Illegal instruction     "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}"
+ * ERROR: dev-lang/python-3.3.6-r1000 failed (prerm phase):
+ *   filter-bash-environment.py failed
+ * 
+ * Call stack:
+ *            ebuild.sh, line 487:  Called __preprocess_ebuild_env
+ *   phase-functions.sh, line 154:  Called __filter_readonly_variables '--filter-features' '--filter-locale' '--filter-path' '--filter-sandbox'
+ *   phase-functions.sh, line 135:  Called die
+ * The specific snippet of code:
+ *      "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}" || die "filter-bash-environment.py failed"
+ * 
+ * If you need support, post the output of `emerge --info '=dev-lang/python-3.3.6-r1000'`,
+ * the complete build log and the output of `emerge -pqv '=dev-lang/python-3.3.6-r1000'`.
+ * The complete build log is located at '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/temp/environment'.
+ * Working directory: '/var/tmp/portage/._portage_reinstall_.2c8mqy/pym'
+ * S: '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/work/python-3.3.6'
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/isolated-functions.sh: line 109:  3802 Illegal instruction     "$PORTAGE_BIN_PATH"/ebuild-ipc exit 1
+ * The ebuild phase 'prerm' has exited unexpectedly. This type of behavior
+ * is known to be triggered by things such as failed variable assignments
+ * (bug #190128) or bad substitution errors (bug #200313). Normally, before
+ * exiting, bash should have displayed an error message above. If bash did
+ * not produce an error message above, it's possible that the ebuild has
+ * called `exit` when it should have called `die` instead. This behavior
+ * may also be triggered by a corrupt bash binary or a hardware problem
+ * such as memory or cpu malfunction. If the problem is not reproducible or
+ * it appears to occur randomly, then it is likely to be triggered by a
+ * hardware problem. If you suspect a hardware problem then you should try
+ * some basic hardware diagnostics such as memtest. Please do not report
+ * this as a bug unless it is consistently reproducible and you are sure
+ * that your bash binary and hardware are functioning properly.
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/phase-functions.sh: line 85:  3811 Illegal instruction     "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}"
+ * ERROR: dev-lang/python-3.3.6-r1000 failed:
+ *   filter-bash-environment.py failed
+ * 
+ * Call stack:
+ *    misc-functions.sh, line  17:  Called source '/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/ebuild.sh'
+ *            ebuild.sh, line 487:  Called __preprocess_ebuild_env
+ *   phase-functions.sh, line 154:  Called __filter_readonly_variables '--filter-features' '--filter-locale' '--filter-path' '--filter-sandbox'
+ *   phase-functions.sh, line 135:  Called die
+ * The specific snippet of code:
+ *      "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}" || die "filter-bash-environment.py failed"
+ * 
+ * If you need support, post the output of `emerge --info '=dev-lang/python-3.3.6-r1000'`,
+ * the complete build log and the output of `emerge -pqv '=dev-lang/python-3.3.6-r1000'`.
+ * This ebuild is from an overlay named 'gentoo': '/var/db/pkg/'
+ * The complete build log is located at '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/temp/environment'.
+ * Working directory: '/var/tmp/portage/._portage_reinstall_.2c8mqy/pym'
+ * S: '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/work/python-3.3.6'
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/isolated-functions.sh: line 109:  3902 Illegal instruction     "$PORTAGE_BIN_PATH"/ebuild-ipc exit 1
+ * The ebuild phase 'die_hooks' has exited unexpectedly. This type of
+ * behavior is known to be triggered by things such as failed variable
+ * assignments (bug #190128) or bad substitution errors (bug #200313).
+ * Normally, before exiting, bash should have displayed an error message
+ * above. If bash did not produce an error message above, it's possible
+ * that the ebuild has called `exit` when it should have called `die`
+ * instead. This behavior may also be triggered by a corrupt bash binary or
+ * a hardware problem such as memory or cpu malfunction. If the problem is
+ * not reproducible or it appears to occur randomly, then it is likely to
+ * be triggered by a hardware problem. If you suspect a hardware problem
+ * then you should try some basic hardware diagnostics such as memtest.
+ * Please do not report this as a bug unless it is consistently
+ * reproducible and you are sure that your bash binary and hardware are
+ * functioning properly.
+!!! FAILED prerm: 1
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/phase-functions.sh: line 85:  3910 Illegal instruction     "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}"
+ * ERROR: dev-lang/python-3.3.6-r1000 failed (postrm phase):
+ *   filter-bash-environment.py failed
+ * 
+ * Call stack:
+ *            ebuild.sh, line 487:  Called __preprocess_ebuild_env
+ *   phase-functions.sh, line 154:  Called __filter_readonly_variables '--filter-features' '--filter-locale' '--filter-path' '--filter-sandbox'
+ *   phase-functions.sh, line 135:  Called die
+ * The specific snippet of code:
+ *      "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}" || die "filter-bash-environment.py failed"
+ * 
+ * If you need support, post the output of `emerge --info '=dev-lang/python-3.3.6-r1000'`,
+ * the complete build log and the output of `emerge -pqv '=dev-lang/python-3.3.6-r1000'`.
+ * The complete build log is located at '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/temp/environment'.
+ * Working directory: '/var/tmp/portage/._portage_reinstall_.2c8mqy/pym'
+ * S: '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/work/python-3.3.6'
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/isolated-functions.sh: line 109:  3988 Illegal instruction     "$PORTAGE_BIN_PATH"/ebuild-ipc exit 1
+ * The ebuild phase 'postrm' has exited unexpectedly. This type of behavior
+ * is known to be triggered by things such as failed variable assignments
+ * (bug #190128) or bad substitution errors (bug #200313). Normally, before
+ * exiting, bash should have displayed an error message above. If bash did
+ * not produce an error message above, it's possible that the ebuild has
+ * called `exit` when it should have called `die` instead. This behavior
+ * may also be triggered by a corrupt bash binary or a hardware problem
+ * such as memory or cpu malfunction. If the problem is not reproducible or
+ * it appears to occur randomly, then it is likely to be triggered by a
+ * hardware problem. If you suspect a hardware problem then you should try
+ * some basic hardware diagnostics such as memtest. Please do not report
+ * this as a bug unless it is consistently reproducible and you are sure
+ * that your bash binary and hardware are functioning properly.
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/phase-functions.sh: line 85:  3997 Illegal instruction     "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}"
+ * ERROR: dev-lang/python-3.3.6-r1000 failed:
+ *   filter-bash-environment.py failed
+ * 
+ * Call stack:
+ *    misc-functions.sh, line  17:  Called source '/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/ebuild.sh'
+ *            ebuild.sh, line 487:  Called __preprocess_ebuild_env
+ *   phase-functions.sh, line 154:  Called __filter_readonly_variables '--filter-features' '--filter-locale' '--filter-path' '--filter-sandbox'
+ *   phase-functions.sh, line 135:  Called die
+ * The specific snippet of code:
+ *      "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}" || die "filter-bash-environment.py failed"
+ * 
+ * If you need support, post the output of `emerge --info '=dev-lang/python-3.3.6-r1000'`,
+ * the complete build log and the output of `emerge -pqv '=dev-lang/python-3.3.6-r1000'`.
+ * This ebuild is from an overlay named 'gentoo': '/var/db/pkg/'
+ * The complete build log is located at '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/temp/environment'.
+ * Working directory: '/var/tmp/portage/._portage_reinstall_.2c8mqy/pym'
+ * S: '/var/tmp/portage/._unmerge_/dev-lang/python-3.3.6-r1000/work/python-3.3.6'
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/isolated-functions.sh: line 109:  4088 Illegal instruction     "$PORTAGE_BIN_PATH"/ebuild-ipc exit 1
+ * The ebuild phase 'die_hooks' has exited unexpectedly. This type of
+ * behavior is known to be triggered by things such as failed variable
+ * assignments (bug #190128) or bad substitution errors (bug #200313).
+ * Normally, before exiting, bash should have displayed an error message
+ * above. If bash did not produce an error message above, it's possible
+ * that the ebuild has called `exit` when it should have called `die`
+ * instead. This behavior may also be triggered by a corrupt bash binary or
+ * a hardware problem such as memory or cpu malfunction. If the problem is
+ * not reproducible or it appears to occur randomly, then it is likely to
+ * be triggered by a hardware problem. If you suspect a hardware problem
+ * then you should try some basic hardware diagnostics such as memtest.
+ * Please do not report this as a bug unless it is consistently
+ * reproducible and you are sure that your bash binary and hardware are
+ * functioning properly.
+!!! FAILED postrm: 1
+ * The 'postrm' phase of the 'dev-lang/python-3.3.6-r1000' package has
+ * failed with exit value 1.
+ * 
+ * The problem occurred while executing the ebuild file named
+ * 'python-3.3.6-r1000.ebuild' located in the '/var/db/pkg/dev-
+ * lang/python-3.3.6-r1000' directory. If necessary, manually remove the
+ * environment.bz2 file and/or the ebuild file located in that directory.
+ * 
+ * Removal of the environment.bz2 file is preferred since it may allow the
+ * removal phases to execute successfully. The ebuild will be sourced and
+ * the eclasses from the current portage tree will be used when necessary.
+ * Removal of the ebuild file will cause the pkg_prerm() and pkg_postrm()
+ * removal phases to be skipped entirely.
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/phase-functions.sh: line 85:  4147 Illegal instruction     "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}"
+ * ERROR: dev-lang/python-3.3.5-r1 failed (postinst phase):
+ *   filter-bash-environment.py failed
+ * 
+ * Call stack:
+ *            ebuild.sh, line 718:  Called __ebuild_main 'postinst'
+ *   phase-functions.sh, line 888:  Called __filter_readonly_variables '--filter-path' '--filter-sandbox' '--allow-extra-vars'
+ *   phase-functions.sh, line 135:  Called die
+ * The specific snippet of code:
+ *      "${PORTAGE_PYTHON:-/usr/bin/python}" "${PORTAGE_BIN_PATH}"/filter-bash-environment.py "${filtered_vars}" || die "filter-bash-environment.py failed"
+ * 
+ * If you need support, post the output of `emerge --info '=dev-lang/python-3.3.5-r1'`,
+ * the complete build log and the output of `emerge -pqv '=dev-lang/python-3.3.5-r1'`.
+ * The complete build log is located at '/var/tmp/portage/dev-lang/python-3.3.5-r1/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/dev-lang/python-3.3.5-r1/temp/environment'.
+ * Working directory: '/var/tmp/portage/._portage_reinstall_.2c8mqy/pym'
+ * S: '/var/tmp/portage/dev-lang/python-3.3.5-r1/work/python-3.3.5'
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/isolated-functions.sh: line 109:  4226 Illegal instruction     "$PORTAGE_BIN_PATH"/ebuild-ipc exit 1
+ * The ebuild phase 'postinst' has exited unexpectedly. This type of
+ * behavior is known to be triggered by things such as failed variable
+ * assignments (bug #190128) or bad substitution errors (bug #200313).
+ * Normally, before exiting, bash should have displayed an error message
+ * above. If bash did not produce an error message above, it's possible
+ * that the ebuild has called `exit` when it should have called `die`
+ * instead. This behavior may also be triggered by a corrupt bash binary or
+ * a hardware problem such as memory or cpu malfunction. If the problem is
+ * not reproducible or it appears to occur randomly, then it is likely to
+ * be triggered by a hardware problem. If you suspect a hardware problem
+ * then you should try some basic hardware diagnostics such as memtest.
+ * Please do not report this as a bug unless it is consistently
+ * reproducible and you are sure that your bash binary and hardware are
+ * functioning properly.
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/misc-functions.sh: line 1283:  4249 Illegal instruction     "$PORTAGE_BIN_PATH"/ebuild-ipc exit $?
+ * The ebuild phase 'die_hooks' has exited unexpectedly. This type of
+ * behavior is known to be triggered by things such as failed variable
+ * assignments (bug #190128) or bad substitution errors (bug #200313).
+ * Normally, before exiting, bash should have displayed an error message
+ * above. If bash did not produce an error message above, it's possible
+ * that the ebuild has called `exit` when it should have called `die`
+ * instead. This behavior may also be triggered by a corrupt bash binary or
+ * a hardware problem such as memory or cpu malfunction. If the problem is
+ * not reproducible or it appears to occur randomly, then it is likely to
+ * be triggered by a hardware problem. If you suspect a hardware problem
+ * then you should try some basic hardware diagnostics such as memtest.
+ * Please do not report this as a bug unless it is consistently
+ * reproducible and you are sure that your bash binary and hardware are
+ * functioning properly.
+!!! FAILED postinst: 1
+/var/tmp/portage/._portage_reinstall_.2c8mqy/bin/misc-functions.sh: line 1283:  4275 Illegal instruction     "$PORTAGE_BIN_PATH"/ebuild-ipc exit $?
+ * The ebuild phase 'other' has exited unexpectedly. This type of behavior
+ * is known to be triggered by things such as failed variable assignments
+ * (bug #190128) or bad substitution errors (bug #200313). Normally, before
+ * exiting, bash should have displayed an error message above. If bash did
+ * not produce an error message above, it's possible that the ebuild has
+ * called `exit` when it should have called `die` instead. This behavior
+ * may also be triggered by a corrupt bash binary or a hardware problem
+ * such as memory or cpu malfunction. If the problem is not reproducible or
+ * it appears to occur randomly, then it is likely to be triggered by a
+ * hardware problem. If you suspect a hardware problem then you should try
+ * some basic hardware diagnostics such as memtest. Please do not report
+ * this as a bug unless it is consistently reproducible and you are sure
+ * that your bash binary and hardware are functioning properly.

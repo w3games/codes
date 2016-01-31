@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<!--
+# $Id$
+
+This is the example metadata file.
+The root element of this file is <pkgmetadata>. Within this element a
+number of subelements are allowed: herd, maintainer, and
+longdescription. herd is a required subelement.
+
+For a full description look at:
+https://devmanual.gentoo.org/ebuild-writing/misc-files/metadata/
+
+
+Before committing, please remove the comments from this file. They are
+not relevant for general metadata.xml files.
+-->
+<pkgmetadata>
+  <herd>frankenwm</herd>
+<maintainer>
+  <email>w3game@gmail.com</email>
+  <description>A fast dynamic tiling window manager</description>
+</maintainer>
+<longdescription>FrankenWM is a dynamic tiling WM (comparable to dwm or Awesome), featuring the v-stack, b-stack, grid, fibonacci, dualstack, equal and monocle layouts out of the box. If you want to, you can add gaps between the windows as well.
+
+It was once based on monsterwm but has undergone many greater changes including adding pieces from other WMs (hence the name) and porting all sorts of stuff from Xlib to XCB. Many of the original monsterwm patches have been ported as well.
+
+All settings must be set at compile time by editing config.h and it does not feature a status bar (but supports leaving preconfigured space for one).
+</longdescription>
+<!--
+<use>
+	<flag name="flag">Description of how USE='flag' affects this package</flag>
+	<flag name="userland_GNU">Description of how USERLAND='GNU' affects this
+		package</flag>
+	<flag name="aspell">Uses <pkg>app-text/aspell</pkg> for spell checking.
+		Requires an installed dictionary from <cat>app-dicts</cat></flag>
+</use>
+-->
+</pkgmetadata>
