@@ -13,7 +13,7 @@ groups=(local)
 depends=('python' 'pyxdg' 'pygtk' 'pygobject' 'gobject-introspection' 'python-xdg')
 optdepends=('txt2tags')
 source=("https://github.com/gapan/$pkgname/archive/$pkgver.tar.gz")
-md5sums=('SKIP')
+md5sums=('6922ab45c9b8f6cae49af6ea12417585')
 package() {
 	cd "$pkgname-$pkgver"
 	make DESTDIR="$pkgdir/" PREFIX=/usr install
