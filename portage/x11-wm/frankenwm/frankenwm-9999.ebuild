@@ -8,7 +8,6 @@ DESCRIPTION="A fast dynamic tiling window manager"
 HOMEPAGE="https://github.com/sulami/${PN}/"
 MY_P=v${PV}
 SRC_URI=""
-#EGIT_REPO_URI="https://github.com/sulami/FrankenWM/"
 EGIT_REPO_URI="https://github.com/sulami/${PN}/"
 LICENSE="MIT"
 SLOT="0"
