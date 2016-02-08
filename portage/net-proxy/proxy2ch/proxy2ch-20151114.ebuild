@@ -9,11 +9,14 @@ HOMEPAGE="http://prokusi.wiki.fc2.com/wiki/${PN}"
 SRC_URI="https://www.dropbox.com/sh/i3w3rj9lgklcy3u/AAAKKzaA3PbJxW3dj4-w8mIGa/${PN}/${PN}9x-${PV}-htmlonly.zip?dl=0 -> ${P}.zip"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}9x-${PV}
-src_prepare() {
+
+src_unpack() {
+	unpack ${A}
 	cd ${S}/src/${PN}
 	unzip ${P}.zip
+}
+src_prepare() {
 	S=${S}/src/${PN}/${P}
 	cd ${S}
 	eapply ${FILESDIR}/${P}.patch
