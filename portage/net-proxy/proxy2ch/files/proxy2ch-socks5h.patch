@@ -1,0 +1,10 @@
+--- proxy2ch-20151114/src/main.cpp.orig	2015-11-14 02:53:47.000000000 +0900
++++ proxy2ch-20151114/src/main.cpp	2016-01-07 03:11:10.056407236 +0900
+@@ -155,6 +155,7 @@
+ 					else if(!strncasecmp(optarg,"socks4a://",10)) proxy_type = CURLPROXY_SOCKS4A;
+ #endif
+ 					else if(!strncasecmp(optarg,"socks5://",9)) proxy_type = CURLPROXY_SOCKS5;
++					else if(!strncasecmp(optarg,"socks5h://",10)) proxy_type = CURLPROXY_SOCKS5_HOSTNAME;
+ 					log_printf(0,"Using proxy %s:%ld for connection\n",proxy_server,proxy_port);
+ 				}
+ 				else if(!strcmp(options[option_index].name, "api")) {

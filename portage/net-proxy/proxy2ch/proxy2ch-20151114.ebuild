@@ -17,6 +17,7 @@ src_unpack() {
 }
 src_prepare() {
 	eapply ${FILESDIR}/${P}.patch
+	eapply ${FILESDIR}/${PN}-socks5h.patch
 	eapply_user
 	chmod +x ${S}/{compile,configure,depcomp,install-sh,missing}
 }
