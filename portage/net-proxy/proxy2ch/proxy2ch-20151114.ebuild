@@ -5,7 +5,7 @@
 EAPI=6
 inherit eutils
 DESCRIPTION="a proxy tool that corresponds the new specification changes of 2ch (data abolition, attrition acquired by API)"
-HOMEPAGE="http://prokusi.wiki.fc2.com/wiki/${PN}"
+HOMEPAGE="http://xiwayy2kn32bo3ko.onion.link/test/read.cgi/tor/1424667677/ http://prokusi.wiki.fc2.com/wiki/${PN}"
 SRC_URI="http://xiwayy2kn32bo3ko.onion.link/test/download.cgi?board=tor&id=2015111402581320163&filetype=.zip -> ${P}.zip"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
