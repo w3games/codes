@@ -6,19 +6,15 @@ EAPI=6
 inherit eutils
 DESCRIPTION="a proxy tool that corresponds the new specification changes of 2ch (data abolition, attrition acquired by API)"
 HOMEPAGE="http://prokusi.wiki.fc2.com/wiki/${PN}"
-SRC_URI="https://www.dropbox.com/sh/i3w3rj9lgklcy3u/AAAKKzaA3PbJxW3dj4-w8mIGa/${PN}/${PN}9x-${PV}-htmlonly.zip?dl=0 -> ${P}.zip"
+SRC_URI="http://xiwayy2kn32bo3ko.onion.link/test/download.cgi?board=tor&id=2015111402581320163&filetype=.zip -> ${P}.zip"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-S=${WORKDIR}/${PN}9x-${PV}
+S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src/${PN}
-	unzip ${P}.zip
 }
 src_prepare() {
-	S=${S}/src/${PN}/${P}
-	cd ${S}
 	eapply ${FILESDIR}/${P}.patch
 	eapply_user
 	chmod +x ${S}/{compile,configure,depcomp,install-sh,missing}
