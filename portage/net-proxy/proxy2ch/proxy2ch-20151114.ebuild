@@ -22,5 +22,5 @@ src_install() {
 	newconfd ${FILESDIR}/${PN}.conf ${PN}
 	cd ${S}/src
 	make
-	dobin proxy2ch
+	dobin ${PN}
 }
