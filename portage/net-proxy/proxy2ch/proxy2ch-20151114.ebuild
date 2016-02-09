@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~amd64"
 S=${WORKDIR}/${P}
 
 src_prepare() {
-	eapply ${FILESDIR}/${PN}-socks5h.patch
+	eapply ${FILESDIR}/${PN}-socks5h.diff
 	eapply_user
 }
 src_install() {
