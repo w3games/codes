@@ -12,8 +12,8 @@ KEYWORDS="~amd64 ~x86"
 S=${WORKDIR}/${P}
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PF}.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PF}.patch
 }
 src_compile() {
 	emake

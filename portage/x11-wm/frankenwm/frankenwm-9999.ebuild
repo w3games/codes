@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=6
-inherit eutils git-r3 savedconfig toolchain-funcs
+inherit eutils git-r3 savedconfig
 DESCRIPTION="A fast dynamic tiling window manager"
 HOMEPAGE="https://github.com/sulami/${PN}/"
 MY_P=v${PV}
@@ -25,7 +25,7 @@ src_prepare() {
 	eapply_user
 }
 src_compile() {
-	emake PREFIX=/usr CC="$(tc-getCC)"
+	emake PREFIX=/usr
 }
 src_install() {
 	emake DESTDIR="${D}" PREFIX=/usr install
