@@ -12,15 +12,21 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 S=${WORKDIR}/${P}
 
+src_unpack() {
+	unpack ${A}
+}
 src_prepare() {
+	eapply ${FILESDIR}/${P}.patch
 	eapply ${FILESDIR}/${PN}-socks5h.patch
 	eapply_user
+	chmod +x ${S}/{compile,configure,depcomp,install-sh,missing}
+}
+src_configure() {
+	econf
 }
 src_install() {
+	emake DESTDIR="${D}" install
 	dodoc README.txt
 	newinitd ${FILESDIR}/${PN}.init ${PN}
 	newconfd ${FILESDIR}/${PN}.conf ${PN}
-	cd ${S}/src
-	make
-	dobin proxy2ch
 }

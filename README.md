@@ -1,4 +1,3 @@
 # codes
-Under Construction
 
-Local Scripts and Configurations
+some Scripts and Configurations
