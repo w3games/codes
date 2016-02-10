@@ -45,6 +45,8 @@ src_prepare() {
 		Makefile || die
 
 	restore_config config.h
+
+	epatch ${FILESDIR}/${P}-bsd-sources.patch
 	epatch_user
 }
 
