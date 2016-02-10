@@ -46,7 +46,11 @@ src_prepare() {
 
 	restore_config config.h
 
-	epatch ${FILESDIR}/${P}-bsd-sources.patch
+	GLIBC_VER=`ldd --version | head -n 1 | cut -d \  -f 5`
+	TOF=`echo "${GLIBC_VER} >= 2.20" | bc`
+	if [ $TOF -eq 1 ]; then
+		epatch ${FILESDIR}/${P}-bsd-sources.patch
+	fi
 	epatch_user
 }
 
