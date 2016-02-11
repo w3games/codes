@@ -1,3 +1,3 @@
 # codes
 
-some Scripts and Configurations
+some Scripts (ebuild, PKGBUILD, shell scripts, and so on) and Configurations
