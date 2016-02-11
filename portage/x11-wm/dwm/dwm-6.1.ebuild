@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=6
 
 inherit eutils savedconfig toolchain-funcs
 
@@ -49,9 +49,9 @@ src_prepare() {
 	GLIBC_VER=`ldd --version | head -n 1 | cut -d \  -f 5`
 	TOF=`echo "${GLIBC_VER} >= 2.20" | bc`
 	if [ $TOF -eq 1 ]; then
-		epatch ${FILESDIR}/${P}-bsd-sources.patch
+		sed -i -e 's/BSD_SOURCE/DEFAULT_SOURCE/' config.mk || die
 	fi
-	epatch_user
+	eapply_user
 }
 
 src_compile() {
