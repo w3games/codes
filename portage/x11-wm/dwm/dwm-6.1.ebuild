@@ -45,13 +45,13 @@ src_prepare() {
 		-e 's|@${CC}|$(CC)|g' \
 		Makefile || die
 
-	restore_config config.h
-
 	GLIBC_VER=`ldd --version | head -n 1 | cut -d \  -f 5`
 	TOF=`echo "${GLIBC_VER} >= 2.20" | bc`
 	if [ $TOF -eq 1 ]; then
 		sed -i -e 's/BSD_SOURCE/DEFAULT_SOURCE/g' config.mk || die
 	fi
+
+	restore_config config.h
 	eapply_user
 }
 
