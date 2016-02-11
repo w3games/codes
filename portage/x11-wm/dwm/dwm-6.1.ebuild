@@ -49,7 +49,7 @@ src_prepare() {
 	GLIBC_VER=`ldd --version | head -n 1 | cut -d \  -f 5`
 	TOF=`echo "${GLIBC_VER} >= 2.20" | bc`
 	if [ $TOF -eq 1 ]; then
-		sed -i -e 's/BSD_SOURCE/DEFAULT_SOURCE/' config.mk || die
+		sed -i -e 's/BSD_SOURCE/DEFAULT_SOURCE/g' config.mk || die
 	fi
 	eapply_user
 }
