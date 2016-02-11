@@ -19,6 +19,7 @@ REQUIRED_USE="|| ( dmenu rofi )"
 
 DEPEND="
 	x11-libs/libX11
+	x11-libs/libXft
 	dmenu? ( x11-misc/dmenu )
 	rofi? ( x11-misc/rofi )
 	xinerama? (
