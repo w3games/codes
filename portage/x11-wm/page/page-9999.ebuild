@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="6"
+EAPI="5"
 
-inherit eutils git-r3
+inherit git-r3
 
 DESCRIPTION="A mouse friendly tiling window manager"
 HOMEPAGE="http://www.hzog.net/index.php/Main_Page"
@@ -37,13 +37,3 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	!dev-tcltk/tcllib"
-
-S=${WORKDIR}/${P}
-
-src_compile() {
-        emake PREFIX=/usr
-	}
-	
-src_install() {
-        emake DESTDIR="${D}" PREFIX=/usr install
-}
