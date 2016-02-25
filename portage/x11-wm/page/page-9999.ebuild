@@ -43,7 +43,3 @@ src_prepare() {
 	eapply_user
 	sh ./build_package_sources.sh
 }
-
-src_install() {
-        emake DESTDIR="${D}" PREFIX=/usr install
-}
