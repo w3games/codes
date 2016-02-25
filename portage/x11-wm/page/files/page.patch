@@ -10,6 +10,6 @@ diff -Naru old/build_package_sources.sh new/build_package_sources.sh
  cd - 
 -mkdir -p release
 -tar -czf release/page-${VERSION}.tar.gz -C /tmp page-${VERSION}
-+rsync -ahvAHSX --delete /tmp/page-${VERSION}/ .
++rsync -ahv --delete /tmp/page-${VERSION}/ .
  rm -r /tmp/page-${VERSION}
  set +x
