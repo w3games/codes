@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit git-r3
+inherit eutils git-r3
 
 DESCRIPTION="A mouse friendly tiling window manager"
 HOMEPAGE="http://www.hzog.net/index.php/Main_Page"
@@ -37,3 +37,24 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	!dev-tcltk/tcllib"
+
+S=${WORKDIR}/${P}
+
+src_prepare() {
+	# extract the version from the configure.ac
+	AC_INIT_EXTRACT=`grep AC_INIT configure.ac`
+	SRC_VER=`echo "changequote([,])define([AC_INIT], [\\$2])${AC_INIT_EXTRACT}" | m4 -`
+
+	./build_package_sources.sh
+	cd release
+	tar xpf ${PN}-${SRC_VER}.tar.gz
+	S=${S}/release/${PN}-${SRC_VER}
+}
+
+src_compile() {
+        emake PREFIX=/usr
+}
+
+src_install() {
+        emake DESTDIR="${D}" PREFIX=/usr install
+}
