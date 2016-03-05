@@ -33,15 +33,30 @@ diff -Naru btrfs-progs-v4.0.1-old/cmds-filesystem.c btrfs-progs-v4.0.1-new/cmds-
  
 diff -Naru btrfs-progs-v4.0.1-old/ctree.h btrfs-progs-v4.0.1-new/ctree.h
 --- btrfs-progs-v4.0.1-old/ctree.h	2015-05-20 22:12:44.000000000 +0900
-+++ btrfs-progs-v4.0.1-new/ctree.h	2016-03-05 17:20:53.389183967 +0900
-@@ -457,6 +457,7 @@
- #define BTRFS_FEATURE_INCOMPAT_DEFAULT_SUBVOL	(1ULL << 1)
- #define BTRFS_FEATURE_INCOMPAT_MIXED_GROUPS	(1ULL << 2)
- #define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZO	(1ULL << 3)
-+#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZ4	(1ULL << 4)
++++ btrfs-progs-v4.0.1-new/ctree.h	2016-03-05 17:44:44.715879066 +0900
+@@ -465,16 +465,17 @@
+  * number
+  */
+ #define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZOv2   (1ULL << 4)
++#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZ4	(1ULL << 5)
  
  /*
-  * some patches floated around with a second compression method
+  * older kernels tried to do bigger metadata blocks, but the
+  * code was pretty buggy.  Lets not let them try anymore.
+  */
+-#define BTRFS_FEATURE_INCOMPAT_BIG_METADATA     (1ULL << 5)
+-#define BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF	(1ULL << 6)
+-#define BTRFS_FEATURE_INCOMPAT_RAID56		(1ULL << 7)
+-#define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA	(1ULL << 8)
+-#define BTRFS_FEATURE_INCOMPAT_NO_HOLES		(1ULL << 9)
++#define BTRFS_FEATURE_INCOMPAT_BIG_METADATA     (1ULL << 6)
++#define BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF	(1ULL << 7)
++#define BTRFS_FEATURE_INCOMPAT_RAID56		(1ULL << 8)
++#define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA	(1ULL << 9)
++#define BTRFS_FEATURE_INCOMPAT_NO_HOLES		(1ULL << 10)
+ 
+ 
+ #define BTRFS_FEATURE_COMPAT_SUPP		0ULL
 @@ -483,6 +484,7 @@
  	(BTRFS_FEATURE_INCOMPAT_MIXED_BACKREF |		\
  	 BTRFS_FEATURE_INCOMPAT_DEFAULT_SUBVOL |	\
