@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils git-r3 multilib toolchain-funcs readme.gentoo
+inherit eutils git-r3 multilib toolchain-funcs readme.gentoo-r1
 
 DESCRIPTION="Notion is a tiling, tabbed window manager for the X window system"
 HOMEPAGE="http://notion.sourceforge.net"
