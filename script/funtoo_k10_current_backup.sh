@@ -13,7 +13,7 @@ BACKUPDIR="/home/$SUDO_USER/.backup_funtoo"
 DISTRI="funtoo_k10_current"
 
 DATE=$(date +%Y-%m%d-%H%M%S)
-TO="root@pentium4:/mnt/$DISTRI"
+TO="root@pentium4-ula:/mnt/$DISTRI"
 
 for i in $BACKUPDIR $BACKUPDIR/$DISTRI
 do
@@ -26,7 +26,7 @@ done
 #
 echo "Collecting data for rsync."
 cd $BACKUPDIR/$DISTRI
-for i in boot etc lib/modules root usr/packages var
+for i in boot etc lib/modules root var
 do
   if not test -d $i
     then mkdir -p $i
@@ -44,7 +44,7 @@ rsync -ahAHSX \
 	/boot/ boot/
 umount /boot
 
-for i in etc lib/modules usr/packages
+for i in etc lib/modules
 do
     rsync -ahAHSX --delete /$i/ $i/
 done
@@ -59,6 +59,7 @@ rsync -ahAHSX \
 rsync -ahAHSX \
  	--delete \
 	--exclude git/ \
+	--exclude lib/portage/distfiles/ \
 	--exclude lib/transmission/downloads/ \
 	--exclude tmp/ \
 	/var/ var/
@@ -73,4 +74,4 @@ rsync -ahAHSX \
 
 # Cleaning
 #
-rm -r $BACKUPDIR/$DISTRI/usr/packages
+# rm -r $BACKUPDIR/$DISTRI/var/lib/portage/packages
