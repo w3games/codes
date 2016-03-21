@@ -13,7 +13,7 @@ BACKUPDIR="/home/$SUDO_USER/.backup_funtoo"
 DISTRI="funtoo_k10_current"
 
 DATE=$(date +%Y-%m%d-%H%M%S)
-TO="root@pentium4-ula:/mnt/$DISTRI"
+TO="root@pentium4:/mnt/$DISTRI"
 
 for i in $BACKUPDIR $BACKUPDIR/$DISTRI
 do
