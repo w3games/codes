@@ -16,10 +16,15 @@ set BACKUP root@pentium4:/mnt/$SUBVOL
 
 echo "Syncing Home"
 rsync -ahAHSX \
-      --del \
+      --delete \
       --exclude leaf/.cache/ \
       --exclude leaf/.backup_funtoo/ \
       --exclude leaf/.git/ \
+      --exclude leaf/.wine \
+      --exclude leaf/.wine/ \
+      --exclude leaf/.wine_games/ \
+      --exclude ftps/ \
+      --exclude gits/ \
       --info=progress2 \
       --log-file=/var/log/rsync.log \
       /home/ $BACKUP/
