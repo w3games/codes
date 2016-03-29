@@ -46,7 +46,7 @@ umount /boot
 
 for i in etc lib/modules
 do
-    rsync -ahAHSX --delete /$i/ $i/
+    rsync -ahAHSX --delete --exclude .git/ /$i/ $i/
 done
 
 rsync -ahAHSX \
