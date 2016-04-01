@@ -5,9 +5,10 @@ if not set -q SUDO_USER >/dev/null
       set SUDO_USER leaf
 end
 
-set WINDOWS /mnt/windows
-#set WINDATA /mnt/winusers
-set WINUSER leaf
+set WINDOWS	/mnt/windows
+#set WINDATA	/mnt/winusers
+set WINUSER	leaf
+set WINNAVI2ch	$WINDOWS/Users/$WINUSER/AppData/Roaming/.navi2ch
 
 #for d in WINDOWS WINDATA
 #  if not test -d $$d
@@ -47,12 +48,15 @@ end
 #      --exclude Thumbs.db \
 #      /home/$SUDO_USER/Downloads/windows/ $WINDOWS/Users/$WINUSER/Downloads/
 
+if not test -d $WINNAVI2ch 
+      mkdir $WINNAVI2ch 
+end
 echo \n"Syncing .navi2ch from Linux to Windows"
 rsync -ahvAHSX \
       --delete \
       --exclude desktop.ini \
       --exclude Thumbs.db \
-      /home/$SUDO_USER/.navi2ch/ $WINDOWS/Users/$WINUSER/AppData/Roaming/.navi2ch/
+      /home/$SUDO_USER/.navi2ch/ $WINNAVI2ch/
 
 #for d in WINDOWS WINDATA
 #  umount $$d

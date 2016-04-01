@@ -8,6 +8,7 @@ end
 set WINDOWS /mnt/windows
 #set WINDATA /mnt/winusers
 set WINUSER leaf
+set WINNAVI2ch	$WINDOWS/Users/$WINUSER/AppData/Roaming/.navi2ch
 
 #for d in $WINDOWS WINDATA
 #  if not test -d $$d
@@ -46,7 +47,7 @@ rsync -ahvAHSX \
       --dry-run \
       --exclude desktop.ini \
       --exclude Thumbs.db \
-       $WINDOWS/Users/$WINUSER/AppData/Roaming/.navi2ch/ /home/$SUDO_USER/.navi2ch/
+       $WINNAVI2ch/ /home/$SUDO_USER/.navi2ch/
 
 find /home/$SUDO_USER/Documents/scripts/ \
      -type f \
