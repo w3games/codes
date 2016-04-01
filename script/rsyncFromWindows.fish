@@ -25,7 +25,6 @@ for i in Documents Pictures
     echo \n"Syncing $i from Windows to Linux"
     rsync -ahvAHS \
 	  --delete \
-	  --dry-run \
 	  --exclude desktop.ini \
 	  --exclude Thumbs.db \
 	  --exclude My\ Music \
