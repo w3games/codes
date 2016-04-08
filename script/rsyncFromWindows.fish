@@ -6,20 +6,20 @@ if not set -q SUDO_USER >/dev/null
 end
 
 set WINDOWS /mnt/windows
-#set WINDATA /mnt/winusers
+set WINDATA /mnt/winusers
 set WINUSER leaf
 set WINNAVI2ch	$WINDOWS/Users/$WINUSER/AppData/Roaming/.navi2ch
 
-#for d in $WINDOWS WINDATA
-#  if not test -d $$d
-#    mkdir $$d
-#    mountpoint -q $$d; or sudo mount $$d
-#  end
-#end
-if not test -d $WINDOWS 
-  mkdir $WINDOWS
+for d in $WINDOWS WINDATA
+  if not test -d $$d
+    mkdir $$d
+    mountpoint -q $$d; or sudo mount $$d
+  end
 end
-mountpoint -q $WINDOWS; or sudo mount $WINDOWS
+# if not test -d $WINDOWS 
+#   mkdir $WINDOWS
+# end
+# mountpoint -q $WINDOWS; or sudo mount $WINDOWS
 
 for i in Documents Pictures 
     echo \n"Syncing $i from Windows to Linux"
@@ -32,13 +32,13 @@ for i in Documents Pictures
 	  --exclude My\ Videos \
 	  --exclude Saved\ Pictures/ \
 	  --exclude Camera\ Roll/ \
-	  $WINDOWS/Users/$WINUSER/$i/ /home/$SUDO_USER/$i/
+	  $WINDATA/Users/$WINUSER/$i/ /home/$SUDO_USER/$i/
 end
 echo \n"Syncing Downloads from Windows to Linux"
 rsync -ahvAHSX \
       --exclude desktop.ini \
       --exclude Thumbs.db \
-      $WINDOWS/Users/$WINUSER/Downloads/ /home/$SUDO_USER/Downloads/windows/
+      $WINDATA/Users/$WINUSER/Downloads/ /home/$SUDO_USER/Downloads/windows/
 
 echo \n"Syncing .navi2ch from Windows to Linux"
 rsync -ahvAHSX \
@@ -57,9 +57,9 @@ find /home/$SUDO_USER/Documents/scripts/ \
 
 chmod +x /home/$SUDO_USER/.wmii/wmiirc_local
 
-#for d in WINDOWS WINDATA
-#  umount $$d
-#  rmdir  $$d
-#end 
-umount $WINDOWS
-rmdir  $WINDOWS 
+for d in WINDOWS WINDATA
+  umount $$d
+  rmdir  $$d
+end 
+# umount $WINDOWS
+# rmdir  $WINDOWS 
