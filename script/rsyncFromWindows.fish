@@ -36,24 +36,25 @@ for i in Documents Pictures
 end
 echo \n"Syncing Downloads from Windows to Linux"
 rsync -ahvAHSX \
-      --exclude desktop.ini \
-      --exclude Thumbs.db \
-      $WINDATA/Users/$WINUSER/Downloads/ /home/$SUDO_USER/Downloads/windows/
+	--delete \
+	--exclude desktop.ini \
+	--exclude Thumbs.db \
+	$WINDATA/Users/$WINUSER/Downloads/ /home/$SUDO_USER/Downloads/windows/
 
 echo \n"Syncing .navi2ch from Windows to Linux"
 rsync -ahvAHSX \
-      --delete \
-      --dry-run \
-      --exclude desktop.ini \
-      --exclude Thumbs.db \
-       $WINNAVI2ch/ /home/$SUDO_USER/.navi2ch/
+	--delete \
+	--dry-run \
+	--exclude desktop.ini \
+	--exclude Thumbs.db \
+	$WINNAVI2ch/ /home/$SUDO_USER/.navi2ch/
 
 find /home/$SUDO_USER/Documents/scripts/ \
-     -type f \
-     -name '*.tar.*' \
-     -o -name '.keep_sys-apps_baselayout-0' \
-     -prune \
-     -o -exec chmod +x '{}' \;
+	-type f \
+	-name '*.tar.*' \
+	-o -name '.keep_sys-apps_baselayout-0' \
+	-prune \
+	-o -exec chmod +x '{}' \;
 
 chmod +x /home/$SUDO_USER/.wmii/wmiirc_local
 
