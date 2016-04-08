@@ -39,15 +39,15 @@ for i in Documents Pictures
 	  /home/$SUDO_USER/$i/ $WINDATA/Users/$WINUSER/$i/
 end
 
-#if not test -d $WINDOWS/Users/$WINUSER/Downloads
-#   mkdir $WINDOWS/Users/$WINUSER/Downloads
-#end
-#echo \n"Syncing Downloads from Linux to Windows"
-#rsync -ahvAHSX \
-#      --delete \
-#      --exclude desktop.ini \
-#      --exclude Thumbs.db \
-#      /home/$SUDO_USER/Downloads/windows/ $WINDOWS/Users/$WINUSER/Downloads/
+if not test -d $WINDATA/Users/$WINUSER/Downloads
+   mkdir $WINDATA/Users/$WINUSER/Downloads
+end
+echo \n"Syncing Downloads from Linux to Windows"
+rsync -ahvAHSX \
+      --delete \
+      --exclude desktop.ini \
+      --exclude Thumbs.db \
+      /home/$SUDO_USER/Downloads/windows/ $WINDATA/Users/$WINUSER/Downloads/
 
 if not test -d $WINNAVI2ch 
       mkdir $WINNAVI2ch 
