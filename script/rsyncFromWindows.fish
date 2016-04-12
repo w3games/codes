@@ -6,11 +6,11 @@ if not set -q SUDO_USER >/dev/null
 end
 
 set WINDOWS /mnt/windows
-set WINDATA /mnt/winusers
+set WINDATA /mnt/windata
 set WINUSER leaf
 set WINNAVI2ch	$WINDOWS/Users/$WINUSER/AppData/Roaming/.navi2ch
 
-for d in $WINDOWS WINDATA
+for d in WINDOWS WINDATA
   if not test -d $$d
     mkdir $$d
     mountpoint -q $$d; or sudo mount $$d
