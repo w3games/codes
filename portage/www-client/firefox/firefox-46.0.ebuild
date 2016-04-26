@@ -28,7 +28,7 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${PN}-45.0-patches-03"
+PATCH="${PN}-46.0-patches-0.3"
 MOZ_HTTP_URI="https://archive.mozilla.org/pub/${PN}/releases"
 
 MOZCONFIG_OPTIONAL_GTK3=1
