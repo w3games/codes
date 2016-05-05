@@ -1,0 +1,27 @@
+diff -Naru proxy2ch-20160424-old/src/BBS2chProxyConnection.cpp proxy2ch-20160424-new/src/BBS2chProxyConnection.cpp
+--- proxy2ch-20160424-old/src/BBS2chProxyConnection.cpp	2016-04-24 21:10:51.000000000 +0900
++++ proxy2ch-20160424-new/src/BBS2chProxyConnection.cpp	2016-05-06 04:10:29.824238659 +0900
+@@ -888,7 +888,14 @@
+ 				goto replay;
+ 			}
+ 			else {
+-				if(!strncmp(ptr,"mailto:",7)) ptr += 7;
++			  if(!strncmp(ptr,"mailto:",7)) {
++			    ptr += 7;
++			    endStr = "</a></b></div>";
++			  }
++			  else {
++			    endStr = "</b></div>";
++			  }
++			  
+ 				while(1) {
+ 					if(*ptr == '<' && !strncmp(ptr,"<a href=\"",9)) {
+ 						ptr = strchr(ptr,'>');
+@@ -905,7 +912,6 @@
+ 				//while(*ptr != '"') mail[i++] = *ptr++;
+ 				mail[i] = 0;
+ 			}
+-			endStr = "</a></b></div>";
+ 			while(*ptr != '>') ptr++;
+ 			ptr++;
+ 		}
