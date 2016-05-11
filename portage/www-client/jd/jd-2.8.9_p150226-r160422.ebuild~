@@ -12,7 +12,7 @@ DESCRIPTION="gtk2 based 2ch browser written in C++"
 HOMEPAGE="http://jd4linux.sourceforge.jp/"
 
 SRC_URI="mirror://sourceforge.jp/jd4linux/62877/${MY_P}.tgz
-	 http://xiwayy2kn32bo3ko.onion.link/test/download.cgi?board=tor&id=2016042812082118457&filetype=.zip -> ${PF}.patch.xz"
+	 http://xiwayy2kn32bo3ko.onion.link/test/download.cgi?board=tor&id=2016042812082118457&filetype=.zip -> ${PF}.patch.zip"
 
 LICENSE="GPL-2"
 SLOT="0"

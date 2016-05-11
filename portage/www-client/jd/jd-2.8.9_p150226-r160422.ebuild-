@@ -39,7 +39,7 @@ S="${WORKDIR}/${MY_P}"
 
 AUTOTOOLS_AUTORECONF=1
 
-PATCHES=( "${WORKDIR}/${PF}.patch" )
+PATCHES=( "${WORKDIR}/${P}-r160422.diff" )
 
 src_configure() {
 	# use gnomeui sm instead of Xorg SM/ICE
