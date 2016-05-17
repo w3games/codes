@@ -23,8 +23,3 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}-${P}
-
-# src_prepare() {
-# 	epatch "${FILESDIR}"/${PN}-0.9.6-gdk_resources.patch
-# 	epatch "${FILESDIR}"/${PN}-0.9.6-glib-single-include.patch
-# }
