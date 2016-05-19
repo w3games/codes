@@ -15,6 +15,10 @@ KEYWORDS="~x86 ~amd64"
 DEPEND="app-text/txt2tags"
 RDEPEND="${PYTHON_DEPS}
 		dev-python/pyxdg"
+src_prepare() {
+	eapply ${FILESDIR}/${P}-python_version.patch
+	eapply_user
+}
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${DESTTREE}" man install
 }
