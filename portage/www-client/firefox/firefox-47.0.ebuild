@@ -28,7 +28,7 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${PN}-46.0-patches-01"
+PATCH="${P}-patches-0.1"
 MOZ_HTTP_URI="https://archive.mozilla.org/pub/${PN}/releases"
 
 #MOZCONFIG_OPTIONAL_QT5=1 -- fails to build so leave it off until the code can be patched
