@@ -13,9 +13,9 @@ set WINNAVI2ch	$WINDOWS/Users/$WINUSER/AppData/Roaming/.navi2ch
 for d in WINDOWS WINDATA
   if not test -d $$d
     mkdir $$d
-    mountpoint -q $$d; or sudo mount $$d
-    mountpoint -q $$d; or exit 1
   end
+  mountpoint -q $$d; or sudo mount $$d
+  mountpoint -q $$d; or exit 1
 end
 # if not test -d $WINDOWS 
 #   mkdir $WINDOWS
