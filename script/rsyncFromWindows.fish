@@ -14,6 +14,7 @@ for d in WINDOWS WINDATA
   if not test -d $$d
     mkdir $$d
     mountpoint -q $$d; or sudo mount $$d
+    mountpoint -q $$d; or exit 1
   end
 end
 # if not test -d $WINDOWS 

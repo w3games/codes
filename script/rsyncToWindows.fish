@@ -16,6 +16,7 @@ for d in WINDOWS WINDATA
     mkdir $$d
   end
   mountpoint -q $$d; or sudo mount $$d
+  mountpoint -q $$d; or exit 1
 end
 # if not test -d $WINDOWS 
 #   mkdir $WINDOWS
