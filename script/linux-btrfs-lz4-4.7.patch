@@ -2,15 +2,15 @@
  fs/btrfs/Makefile      |   2 +-
  fs/btrfs/compression.c |   1 +
  fs/btrfs/compression.h |   6 +-
- fs/btrfs/ctree.h       |   1 +
+ fs/btrfs/ctree.h       |   3 +
  fs/btrfs/ctree.h.rej   |  10 ++
  fs/btrfs/disk-io.c     |   2 +
  fs/btrfs/ioctl.c       |   4 +
  fs/btrfs/lz4.c         | 445 +++++++++++++++++++++++++++++++++++++++++++++++++
  fs/btrfs/props.c       |   6 +
- fs/btrfs/super.c       |  10 ++
+ fs/btrfs/super.c       |  12 +-
  fs/btrfs/sysfs.c       |   2 +
- 12 files changed, 488 insertions(+), 3 deletions(-)
+ 12 files changed, 491 insertions(+), 4 deletions(-)
 
 diff --git a/fs/btrfs/Kconfig b/fs/btrfs/Kconfig
 index 80e9c18..e68cdb3 100644
@@ -74,10 +74,19 @@ index f49d8b8..74bab58 100644
  
  #endif
 diff --git a/fs/btrfs/ctree.h b/fs/btrfs/ctree.h
-index 4274a7b..a68d0da 100644
+index 4274a7b..ef0bb11 100644
 --- a/fs/btrfs/ctree.h
 +++ b/fs/btrfs/ctree.h
-@@ -276,6 +276,7 @@ struct btrfs_super_block {
+@@ -260,6 +260,8 @@ struct btrfs_super_block {
+  * Compat flags that we support.  If any incompat flags are set other than the
+  * ones specified below then we will fail to mount
+  */
++#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZ4    (1ULL << 0)
++
+ #define BTRFS_FEATURE_COMPAT_SUPP		0ULL
+ #define BTRFS_FEATURE_COMPAT_SAFE_SET		0ULL
+ #define BTRFS_FEATURE_COMPAT_SAFE_CLEAR		0ULL
+@@ -276,6 +278,7 @@ struct btrfs_super_block {
  	 BTRFS_FEATURE_INCOMPAT_MIXED_GROUPS |		\
  	 BTRFS_FEATURE_INCOMPAT_BIG_METADATA |		\
  	 BTRFS_FEATURE_INCOMPAT_COMPRESS_LZO |		\
@@ -619,7 +628,7 @@ index 3699212..d02387d 100644
  
  	return NULL;
 diff --git a/fs/btrfs/super.c b/fs/btrfs/super.c
-index 60e7179..ea6eecb 100644
+index 60e7179..94bcb09 100644
 --- a/fs/btrfs/super.c
 +++ b/fs/btrfs/super.c
 @@ -491,6 +491,14 @@ int btrfs_parse_options(struct btrfs_root *root, char *options,
@@ -637,15 +646,18 @@ index 60e7179..ea6eecb 100644
  			} else if (strncmp(args[0].from, "no", 2) == 0) {
  				compress_type = "no";
  				btrfs_clear_opt(info->mount_opt, COMPRESS);
-@@ -1210,6 +1218,8 @@ static int btrfs_show_options(struct seq_file *seq, struct dentry *dentry)
+@@ -1210,8 +1218,10 @@ static int btrfs_show_options(struct seq_file *seq, struct dentry *dentry)
  	if (btrfs_test_opt(root, COMPRESS)) {
  		if (info->compress_type == BTRFS_COMPRESS_ZLIB)
  			compress_type = "zlib";
-+		else if (info->compress_type == BTRFS_COMPRESS_LZ4)
-+			compress_type = "lz4";
- 		else
+-		else
++		else if (info->compress_type == BTRFS_COMPRESS_LZO)
  			compress_type = "lzo";
++		else
++			compress_type = "lz4";
  		if (btrfs_test_opt(root, FORCE_COMPRESS))
+ 			seq_printf(seq, ",compress-force=%s", compress_type);
+ 		else
 diff --git a/fs/btrfs/sysfs.c b/fs/btrfs/sysfs.c
 index 4879656..86fb9f3 100644
 --- a/fs/btrfs/sysfs.c
