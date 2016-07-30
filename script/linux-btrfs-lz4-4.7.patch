@@ -3,14 +3,13 @@
  fs/btrfs/compression.c |   1 +
  fs/btrfs/compression.h |   6 +-
  fs/btrfs/ctree.h       |   3 +
- fs/btrfs/ctree.h.rej   |  10 ++
  fs/btrfs/disk-io.c     |   2 +
  fs/btrfs/ioctl.c       |   4 +
  fs/btrfs/lz4.c         | 445 +++++++++++++++++++++++++++++++++++++++++++++++++
  fs/btrfs/props.c       |   6 +
  fs/btrfs/super.c       |  12 +-
  fs/btrfs/sysfs.c       |   2 +
- 12 files changed, 491 insertions(+), 4 deletions(-)
+ 11 files changed, 481 insertions(+), 4 deletions(-)
 
 diff --git a/fs/btrfs/Kconfig b/fs/btrfs/Kconfig
 index 80e9c18..e68cdb3 100644
@@ -94,22 +93,6 @@ index 4274a7b..ef0bb11 100644
  	 BTRFS_FEATURE_INCOMPAT_RAID56 |		\
  	 BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF |		\
  	 BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA |	\
-diff --git a/fs/btrfs/ctree.h.rej b/fs/btrfs/ctree.h.rej
-new file mode 100644
-index 0000000..e3f6bd0
---- /dev/null
-+++ b/fs/btrfs/ctree.h.rej
-@@ -0,0 +1,10 @@
-+--- fs/btrfs/ctree.h	2016-05-16 07:43:13.000000000 +0900
-++++ fs/btrfs/ctree.h	2016-05-18 08:18:07.922626568 +0900
-+@@ -531,6 +531,7 @@
-+ #define BTRFS_FEATURE_INCOMPAT_RAID56		(1ULL << 7)
-+ #define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA	(1ULL << 8)
-+ #define BTRFS_FEATURE_INCOMPAT_NO_HOLES		(1ULL << 9)
-++#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZ4	(1ULL << 10)
-+ 
-+ #define BTRFS_FEATURE_COMPAT_SUPP		0ULL
-+ #define BTRFS_FEATURE_COMPAT_SAFE_SET		0ULL
 diff --git a/fs/btrfs/disk-io.c b/fs/btrfs/disk-io.c
 index 60ce119..c420569 100644
 --- a/fs/btrfs/disk-io.c
