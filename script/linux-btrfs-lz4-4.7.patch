@@ -7,10 +7,10 @@
  fs/btrfs/ioctl.c           |   4 +
  fs/btrfs/lz4.c             | 445 +++++++++++++++++++++++++++++++++++++++++++++
  fs/btrfs/props.c           |   6 +
- fs/btrfs/super.c           |  12 +-
+ fs/btrfs/super.c           |  10 +
  fs/btrfs/sysfs.c           |   2 +
- include/uapi/linux/btrfs.h |  12 +-
- 12 files changed, 486 insertions(+), 9 deletions(-)
+ include/uapi/linux/btrfs.h |   1 +
+ 12 files changed, 479 insertions(+), 3 deletions(-)
 
 diff --git a/fs/btrfs/Kconfig b/fs/btrfs/Kconfig
 index 80e9c18..e68cdb3 100644
@@ -603,7 +603,7 @@ index 3699212..d02387d 100644
  
  	return NULL;
 diff --git a/fs/btrfs/super.c b/fs/btrfs/super.c
-index 60e7179..94bcb09 100644
+index 60e7179..ea6eecb 100644
 --- a/fs/btrfs/super.c
 +++ b/fs/btrfs/super.c
 @@ -491,6 +491,14 @@ int btrfs_parse_options(struct btrfs_root *root, char *options,
@@ -621,18 +621,15 @@ index 60e7179..94bcb09 100644
  			} else if (strncmp(args[0].from, "no", 2) == 0) {
  				compress_type = "no";
  				btrfs_clear_opt(info->mount_opt, COMPRESS);
-@@ -1210,8 +1218,10 @@ static int btrfs_show_options(struct seq_file *seq, struct dentry *dentry)
+@@ -1210,6 +1218,8 @@ static int btrfs_show_options(struct seq_file *seq, struct dentry *dentry)
  	if (btrfs_test_opt(root, COMPRESS)) {
  		if (info->compress_type == BTRFS_COMPRESS_ZLIB)
  			compress_type = "zlib";
--		else
-+		else if (info->compress_type == BTRFS_COMPRESS_LZO)
- 			compress_type = "lzo";
-+		else
++		else if (info->compress_type == BTRFS_COMPRESS_LZ4)
 +			compress_type = "lz4";
- 		if (btrfs_test_opt(root, FORCE_COMPRESS))
- 			seq_printf(seq, ",compress-force=%s", compress_type);
  		else
+ 			compress_type = "lzo";
+ 		if (btrfs_test_opt(root, FORCE_COMPRESS))
 diff --git a/fs/btrfs/sysfs.c b/fs/btrfs/sysfs.c
 index 4879656..86fb9f3 100644
 --- a/fs/btrfs/sysfs.c
@@ -654,30 +651,14 @@ index 4879656..86fb9f3 100644
  	BTRFS_FEAT_ATTR_PTR(extended_iref),
  	BTRFS_FEAT_ATTR_PTR(raid56),
 diff --git a/include/uapi/linux/btrfs.h b/include/uapi/linux/btrfs.h
-index 2bdd1e3..c4148ec 100644
+index 2bdd1e3..0853e2c 100644
 --- a/include/uapi/linux/btrfs.h
 +++ b/include/uapi/linux/btrfs.h
-@@ -253,16 +253,18 @@ struct btrfs_ioctl_fs_info_args {
-  */
- #define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZOv2	(1ULL << 4)
- 
-+#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZ4    (1ULL << 5)
-+
- /*
-  * older kernels tried to do bigger metadata blocks, but the
-  * code was pretty buggy.  Lets not let them try anymore.
-  */
--#define BTRFS_FEATURE_INCOMPAT_BIG_METADATA	(1ULL << 5)
-+#define BTRFS_FEATURE_INCOMPAT_BIG_METADATA	(1ULL << 6)
- 
--#define BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF	(1ULL << 6)
--#define BTRFS_FEATURE_INCOMPAT_RAID56		(1ULL << 7)
--#define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA	(1ULL << 8)
--#define BTRFS_FEATURE_INCOMPAT_NO_HOLES		(1ULL << 9)
-+#define BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF	(1ULL << 7)
-+#define BTRFS_FEATURE_INCOMPAT_RAID56		(1ULL << 8)
-+#define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA	(1ULL << 9)
-+#define BTRFS_FEATURE_INCOMPAT_NO_HOLES		(1ULL << 10)
+@@ -263,6 +263,7 @@ struct btrfs_ioctl_fs_info_args {
+ #define BTRFS_FEATURE_INCOMPAT_RAID56		(1ULL << 7)
+ #define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA	(1ULL << 8)
+ #define BTRFS_FEATURE_INCOMPAT_NO_HOLES		(1ULL << 9)
++#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZ4	(1ULL << 10)
  
  struct btrfs_ioctl_feature_flags {
  	__u64 compat_flags;
