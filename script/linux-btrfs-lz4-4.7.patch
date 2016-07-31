@@ -1,15 +1,16 @@
- fs/btrfs/Kconfig       |   2 +
- fs/btrfs/Makefile      |   2 +-
- fs/btrfs/compression.c |   1 +
- fs/btrfs/compression.h |   6 +-
- fs/btrfs/ctree.h       |   3 +
- fs/btrfs/disk-io.c     |   2 +
- fs/btrfs/ioctl.c       |   4 +
- fs/btrfs/lz4.c         | 445 +++++++++++++++++++++++++++++++++++++++++++++++++
- fs/btrfs/props.c       |   6 +
- fs/btrfs/super.c       |  12 +-
- fs/btrfs/sysfs.c       |   2 +
- 11 files changed, 481 insertions(+), 4 deletions(-)
+ fs/btrfs/Kconfig           |   2 +
+ fs/btrfs/Makefile          |   2 +-
+ fs/btrfs/compression.c     |   1 +
+ fs/btrfs/compression.h     |   6 +-
+ fs/btrfs/ctree.h           |   1 +
+ fs/btrfs/disk-io.c         |   2 +
+ fs/btrfs/ioctl.c           |   4 +
+ fs/btrfs/lz4.c             | 445 +++++++++++++++++++++++++++++++++++++++++++++
+ fs/btrfs/props.c           |   6 +
+ fs/btrfs/super.c           |  12 +-
+ fs/btrfs/sysfs.c           |   2 +
+ include/uapi/linux/btrfs.h |  12 +-
+ 12 files changed, 486 insertions(+), 9 deletions(-)
 
 diff --git a/fs/btrfs/Kconfig b/fs/btrfs/Kconfig
 index 80e9c18..e68cdb3 100644
@@ -73,19 +74,10 @@ index f49d8b8..74bab58 100644
  
  #endif
 diff --git a/fs/btrfs/ctree.h b/fs/btrfs/ctree.h
-index 4274a7b..ef0bb11 100644
+index 4274a7b..a68d0da 100644
 --- a/fs/btrfs/ctree.h
 +++ b/fs/btrfs/ctree.h
-@@ -260,6 +260,8 @@ struct btrfs_super_block {
-  * Compat flags that we support.  If any incompat flags are set other than the
-  * ones specified below then we will fail to mount
-  */
-+#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZ4    (1ULL << 0)
-+
- #define BTRFS_FEATURE_COMPAT_SUPP		0ULL
- #define BTRFS_FEATURE_COMPAT_SAFE_SET		0ULL
- #define BTRFS_FEATURE_COMPAT_SAFE_CLEAR		0ULL
-@@ -276,6 +278,7 @@ struct btrfs_super_block {
+@@ -276,6 +276,7 @@ struct btrfs_super_block {
  	 BTRFS_FEATURE_INCOMPAT_MIXED_GROUPS |		\
  	 BTRFS_FEATURE_INCOMPAT_BIG_METADATA |		\
  	 BTRFS_FEATURE_INCOMPAT_COMPRESS_LZO |		\
@@ -661,3 +653,31 @@ index 4879656..86fb9f3 100644
  	BTRFS_FEAT_ATTR_PTR(big_metadata),
  	BTRFS_FEAT_ATTR_PTR(extended_iref),
  	BTRFS_FEAT_ATTR_PTR(raid56),
+diff --git a/include/uapi/linux/btrfs.h b/include/uapi/linux/btrfs.h
+index 2bdd1e3..c4148ec 100644
+--- a/include/uapi/linux/btrfs.h
++++ b/include/uapi/linux/btrfs.h
+@@ -253,16 +253,18 @@ struct btrfs_ioctl_fs_info_args {
+  */
+ #define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZOv2	(1ULL << 4)
+ 
++#define BTRFS_FEATURE_INCOMPAT_COMPRESS_LZ4    (1ULL << 5)
++
+ /*
+  * older kernels tried to do bigger metadata blocks, but the
+  * code was pretty buggy.  Lets not let them try anymore.
+  */
+-#define BTRFS_FEATURE_INCOMPAT_BIG_METADATA	(1ULL << 5)
++#define BTRFS_FEATURE_INCOMPAT_BIG_METADATA	(1ULL << 6)
+ 
+-#define BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF	(1ULL << 6)
+-#define BTRFS_FEATURE_INCOMPAT_RAID56		(1ULL << 7)
+-#define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA	(1ULL << 8)
+-#define BTRFS_FEATURE_INCOMPAT_NO_HOLES		(1ULL << 9)
++#define BTRFS_FEATURE_INCOMPAT_EXTENDED_IREF	(1ULL << 7)
++#define BTRFS_FEATURE_INCOMPAT_RAID56		(1ULL << 8)
++#define BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA	(1ULL << 9)
++#define BTRFS_FEATURE_INCOMPAT_NO_HOLES		(1ULL << 10)
+ 
+ struct btrfs_ioctl_feature_flags {
+ 	__u64 compat_flags;
