@@ -1,9 +1,0 @@
-diff -Naru xdgmenumaker-old/src/xdgmenumaker xdgmenumaker-new/src/xdgmenumaker
---- xdgmenumaker-old/src/xdgmenumaker	2016-05-19 12:52:18.519906827 +0900
-+++ xdgmenumaker-new/src/xdgmenumaker	2016-05-19 12:51:58.816573654 +0900
-@@ -1,4 +1,4 @@
--#!/usr/bin/env python
-+#!/usr/bin/env python2
- # coding: utf-8
- # vim:et:sta:sts=4:sw=4:ts=8:tw=79:
- 

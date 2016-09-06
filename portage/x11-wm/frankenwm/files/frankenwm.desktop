@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=frankenwm
-Comment=fast dynamic tiling window manager
-Exec=frankenwm
-TryExec=frankenwm
-Icon=
-Type=Application
