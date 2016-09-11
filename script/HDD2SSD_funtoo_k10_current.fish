@@ -18,6 +18,7 @@ mount -o defaults,compress=lz4,recovery,discard,ssd,inode_cache,space_cache,subv
 mount -o defaults,compress=lz4,recovery,autodefrag,inode_cache,space_cache,ro,subvol=$DISTRI	LABEL="various"	$HDD
 
 rsync -ahAHSX --delete --info=progress2 --exclude etc/fstab $HDD/ $SSD/
+# rsync -nvahAHSX --delete -exclude etc/fstab $HDD/ $SSD/
 
 cp /home/leaf/fstab_ssd $SSD/etc/fstab
 
