@@ -21,6 +21,6 @@ rsync -ahAHSX --delete --info=progress2 --exclude etc/fstab $SSD/ $HDD/
 
 cp $SSD/etc/fstab /home/leaf/fstab_ssd
 
-umount $SSD $SSD/var $HDD
+umount $SSD/var $SSD $HDD
 rmdir  $SSD $HDD
 
