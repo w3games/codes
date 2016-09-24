@@ -3,5 +3,5 @@
 # 東風荘用起動スクリプト
 
 cd ~/Documents/myProgramFiles/tonpusou
-java -jar tonpusou_mj.jar
+java -jar tonpusou_mj.jar &
 cd ~
