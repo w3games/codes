@@ -57,9 +57,9 @@ ip6tables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 ip6tables -A INPUT -i lo -j ACCEPT
 ip6tables -A INPUT -m conntrack --ctstate INVALID -j DROP
 ip6tables -A INPUT -s fe80::/10 -p ipv6-icmp -j ACCEPT
-ip6tables -A INPUT -s fd10:ce8:90be::/64 -p ipv6-icmp -j ACCEPT
-ip6tables -A INPUT -s fd10:ce8:90be::/64 -p tcp -j ACCEPT
-# ip6tables -A INPUT -s fd10:ce8:90be::/64 -j ACCEPT
+ip6tables -A INPUT -s fd10:ce8:90:10be::/64 -p ipv6-icmp -j ACCEPT
+ip6tables -A INPUT -s fd10:ce8:90:10be::/64 -p tcp -j ACCEPT
+# ip6tables -A INPUT -s fd10:ce8:90:10be::/64 -j ACCEPT
 ip6tables -A INPUT -p udp -m conntrack --ctstate NEW -j REJECT --reject-with icmp6-port-unreachable
 ip6tables -A INPUT -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j REJECT --reject-with tcp-reset
 
