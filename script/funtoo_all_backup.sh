@@ -1,5 +1,5 @@
 #!/bin/bash
-#funtoo_all_backup.sh
+# funtoo_all_backup.sh
 
 # Initialize and configurations
 #
@@ -10,21 +10,24 @@ fi
 LOOPDEV="/mnt/udf"
 BACKUPDIR="$LOOPDEV/backup_funtoo"
 DISTRI="funtoo_k10_current funtoo_586_stable funtoo_pentium4_stable"
-UDFFILE="~/funtoo_backup.udf"
+UDFFILE="/home/$SUDO_USER/funtoo_backup.udf"
 DATE=$(date +%Y-%m%d-%H%M%S)
-BDSIZE="echo $((24438784 \* 2))KB"
+BDSIZE=`echo $((24438784*2))KB`
 TO="/mnt/sr1"
 
 # Preparing for udf file
 #
 
-if test -f $UDFFILE
-  then mv $UDFFILE `dirname $UDFFILE`/`basename -s .udf $UDFFILE`-$DATE.udf
-fi
+# Rename old $UDFFILE
+# if test -f $UDFFILE
+#   then mv $UDFFILE `dirname $UDFFILE`/`basename -s .udf $UDFFILE`-$DATE.udf
+# fi
 
 truncate --size=$BDSIZE $UDFFILE
-makeudffs --utf8 --lvid="FUNTOO_BACKUP" $UDFFILE
+mkudffs --utf8 --lvid="FUNTOO_BACKUP" $UDFFILE
 mount -o loop,rw $UDFFILE $LOOPDEV
+
+mountpoint -q $LOOPDEV || exit 1
 
 # Main
 #
@@ -107,4 +110,5 @@ do
 done
 
 # Clean up
+sleep 3
 umount $LOOPDEV
