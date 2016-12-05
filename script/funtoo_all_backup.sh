@@ -24,8 +24,11 @@ TO="/mnt/sr1"
 #   then mv $UDFFILE `dirname $UDFFILE`/`basename -s .udf $UDFFILE`-$DATE.udf
 # fi
 
-truncate --size=$BDSIZE $UDFFILE
-mkudffs --utf8 --lvid="FUNTOO_BACKUP" $UDFFILE
+if not test -f $UDFFILE
+  then
+    truncate --size=$BDSIZE $UDFFILE
+    mkudffs --utf8 --lvid="FUNTOO_BACKUP" $UDFFILE
+fi
 mount -o loop,rw $UDFFILE $LOOPDEV
 
 mountpoint -q $LOOPDEV || exit 1
@@ -111,5 +114,5 @@ do
 done
 
 # Clean up
-sleep 3
+sleep 5
 umount $LOOPDEV

@@ -2,14 +2,16 @@
 #
 # bookmarks keywords+title generator
 
-grep "<DD>" ~/Documents/homepage/bookmarks.html \
+set BOOKMARK ~/Documents/settings/firefox/bookmarks.html
+
+grep "<DD>" $BOOKMARK \
 	| sed -e 's/<[^>]*>//g' \
 	| sed -e 's/^$//g' \
 	| sed -e 's/^ *//g' \
 	| sed -e 's/^/・/g' \
 	| sort -u > ~/Documents/homepage/bookmarks-title.txt
 
-grep "<DT>" ~/Documents/homepage/bookmarks.html \
+grep "<DT>" $BOOKMARK \
 	| sed -e 's/<[^>]*>//g' \
 	| sed -e 's/^$//g' \
 	| sed -e 's/^ *//g' \
@@ -18,7 +20,7 @@ grep "<DT>" ~/Documents/homepage/bookmarks.html \
 
 echo "[Keywords]" > ~/Documents/homepage/bookmarks-keywords.txt
 
-grep SHORTCUTURL ~/Documents/homepage/bookmarks.html \
+grep SHORTCUTURL $BOOKMARK \
 	| sed -e 's/<[^>]*>//g' \
 	| sed -e 's/^$//g' \
 	| sed -e 's/^ *//g' \
@@ -31,5 +33,5 @@ echo "[Titles]" >> ~/Documents/homepage/bookmarks-keywords.txt
 cat ~/Documents/homepage/bookmarks-title.txt >> ~/Documents/homepage/bookmarks-keywords.txt 
 
 
-cp -p ~/Documents/homepage/bookmarks-{keywords,title}.txt /mnt/funtoo_586_stable/home/leaf/www/localhost/homepage/
+# cp -p ~/Documents/homepage/bookmarks-{keywords,title}.txt /mnt/funtoo_586_stable/home/leaf/www/localhost/homepage/
 # scp -p ~/Documents/homepage/bookmarks-{keywords,title}.txt leaf@vaionote:~/www/localhost/homepage/
