@@ -13,7 +13,7 @@ DISTRI="funtoo_k10_current funtoo_586_stable funtoo_pentium4_stable"
 UDFFILE="/home/$SUDO_USER/funtoo_backup.udf"
 DATE=$(date +%Y-%m%d-%H%M%S)
 # BDSIZE=`echo $((23652352*2))KB`
-BDSIZE=`dvd+rw-mediainfo /dev/sr1 | grep "Track Size" | gawk '{print $3}' | sed 's/KB//g' | bc`KB
+BDSIZE=`dvd+rw-mediainfo /dev/sr0 | grep "Track Size" | gawk '{print $3}' | sed 's/KB//g' | bc`KB
 TO="/mnt/sr0"
 
 # Preparing for udf file
