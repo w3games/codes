@@ -13,9 +13,9 @@ for c in SSD HDD
     mkdir -p $$c
   end
 end
-mount -o defaults,compress=lzo,recovery,discard,ssd,inode_cache,space_cache,subvol=$DISTRI	LABEL="ssd"	$SSD
-mount -o defaults,compress=lzo,recovery,autodefrag,inode_cache,space_cache,subvol=var		LABEL="various"	$SSD/var
-mount -o defaults,compress=lzo,recovery,autodefrag,inode_cache,space_cache,subvol=$DISTRI	LABEL="various"	$HDD
+mount -o defaults,compress=lzo,usebackuproot,discard,ssd,inode_cache,space_cache,subvol=$DISTRI	LABEL="ssd"	$SSD
+mount -o defaults,compress=lzo,usebackuproot,autodefrag,inode_cache,space_cache,subvol=var		LABEL="various"	$SSD/var
+mount -o defaults,compress=lzo,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI	LABEL="various"	$HDD
 
 rsync 	 -ahAHSX \
 	 --delete \
