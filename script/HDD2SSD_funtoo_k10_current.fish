@@ -14,8 +14,8 @@ for c in SSD HDD
   end
 end
 mount -o defaults,compress=lzo,usebackuproot,discard,ssd,inode_cache,space_cache,subvol=$DISTRI	LABEL="ssd"	$SSD
-mount -o defaults,compress=lzo,usebackuproot,autodefrag,inode_cache,space_cache,subvol=var	LABEL="various"	$SSD/var
-mount -o defaults,compress=lzo,usebackuproot,autodefrag,inode_cache,space_cache,ro,subvol=$DISTRI	LABEL="various"	$HDD
+mount -o defaults,compress=lzo,usebackuproot,autodefrag,subvol=var	LABEL="various"	$SSD/var
+mount -o defaults,compress=lzo,usebackuproot,autodefrag,ro,subvol=$DISTRI	LABEL="various"	$HDD
 
 rsync 	 -ahAHSX \
 	 --delete \
