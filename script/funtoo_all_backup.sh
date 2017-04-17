@@ -77,6 +77,7 @@ do
        	--delete \
       	--exclude git/ \
       	--exclude lib/portage/distfiles/ \
+      	--exclude lib/portage/funtoo/ \
       	--exclude lib/transmission/downloads/ \
       	--exclude tmp/ \
       	/var/ var/
