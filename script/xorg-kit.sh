@@ -12,7 +12,7 @@ REMOTE_COMMIT=`"/bin/sh" -c "git ls-remote origin HEAD" | cut -f 1`
 # Main
 if [ $LOCAL_COMMIT != $REMOTE_COMMIT ]
   then
-    echo "New ebuilds found."
+    echo "New ebuilds arrived."
     exit 0
   else
     echo "Already up-to-date."
