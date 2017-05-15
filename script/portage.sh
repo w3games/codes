@@ -11,7 +11,7 @@ REMOTE_COMMIT=`su nobody -s "/bin/sh" -c "git ls-remote origin HEAD" | cut -f 1`
 # Main
 if [ $LOCAL_COMMIT != $REMOTE_COMMIT ]
   then
-    echo "New ebuilds may have arrived."
+    echo "New ebuilds have arrived."
     exit 0
   else
     echo "Already up-to-date."
