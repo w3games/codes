@@ -115,5 +115,5 @@ do
 done
 
 # Clean up
-sleep 5
+sleep 10
 umount $LOOPDEV
