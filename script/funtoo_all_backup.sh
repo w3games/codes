@@ -124,4 +124,8 @@ done
 
 # Clean up
 sleep 10
+for i in $DISTRI
+do
+  umount /mnt/$i
+done
 umount $LOOPDEV
