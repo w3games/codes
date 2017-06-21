@@ -29,18 +29,16 @@ if not test -f $UDFFILE
     truncate --size=$BDSIZE $UDFFILE
     mkudffs --utf8 --lvid="FUNTOO_BACKUP" $UDFFILE
 fi
-mount -o loop,rw $UDFFILE $LOOPDEV
-
-mountpoint -q $LOOPDEV || exit 1
+mountpoint -q $LOOPDEV || mount -o loop,rw $UDFFILE $LOOPDEV || exit 1
 
 # Preparing DISTRI
 #
 for i in $DISTRI
 do
-  if not test -d /mnt/$DISTRI
-    then mkdir -p /mnt/$DISTRI
+  if not test -d /mnt/$i
+    then mkdir -p /mnt/$i
   fi
-  mountpoint -q /mnt/$DISTRI || mount /mnt/$DISTRI
+  mountpoint -q /mnt/$i || mount /mnt/$i || exit 1
 done
 
 # Main
