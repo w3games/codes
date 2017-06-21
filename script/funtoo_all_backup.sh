@@ -33,6 +33,16 @@ mount -o loop,rw $UDFFILE $LOOPDEV
 
 mountpoint -q $LOOPDEV || exit 1
 
+# Preparing DISTRI
+#
+for i in $DISTRI
+do
+  if not test -d /mnt/$DISTRI
+    then mkdir -p /mnt/$DISTRI
+  fi
+  mountpoint -q /mnt/$DISTRI || mount /mnt/$DISTRI
+done
+
 # Main
 #
 for i in $DISTRI
