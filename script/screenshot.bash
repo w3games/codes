@@ -2,7 +2,7 @@
 
 DIR="${HOME}/Pictures/Screenshots"
 DATE="$(date +%Y-%m%d@%H%M%S)"
-NAME="${DIR}/screenshot-${DATE}.png"
+NAME="${DIR}/screenshot-${DATE}.jpg"
 LOG="${DIR}/screenshots.log"
 
 # Check if the dir to store the screenshots exists, else create it: 
