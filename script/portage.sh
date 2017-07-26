@@ -2,7 +2,7 @@
 #
 # Git Fetch from Funtoo Portage Tree to Local Mirror
 
-cd /usr/portage
+cd /usr/portage/
 
 # Get HEAD Commits
 LOCAL_COMMIT=`su nobody -s "/bin/sh" -c "git --no-pager log --pretty=format:%H -1"`
