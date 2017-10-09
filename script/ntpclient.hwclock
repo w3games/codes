@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ntpclient -s -v ntp1.eonet.ne.jp
-# ntpclient -s -v ntp2.eonet.ne.jp
-# ntpclient -s -v ntp.jst.mfeed.ad.jp
+ntpclient -s ntp1.eonet.ne.jp
+# ntpclient -s ntp2.eonet.ne.jp
+# ntpclient -s ntp.jst.mfeed.ad.jp
 hwclock --systohc
