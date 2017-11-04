@@ -17,6 +17,7 @@ mount -o defaults,compress=lzo,usebackuproot,discard,ssd,inode_cache,space_cache
 mount -o defaults,compress=lzo,usebackuproot,autodefrag,subvol=var		LABEL="various"	$SSD/var
 mount -o defaults,compress=lzo,usebackuproot,autodefrag,subvol=$DISTRI	LABEL="various"	$HDD
 
+echo "Syncing SSD to HDD." \n
 rsync 	 -ahAHSX \
 	 --delete \
 	 --info=progress2 \
