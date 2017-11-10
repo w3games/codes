@@ -1,6 +1,6 @@
 #!/bin/fish
 #
-# funtoo_k10_current_restore.fish
+# HDD2SSD_funtoo_k10_current.fish
 
 set DISTRI funtoo_k10_current
 set SSD /mnt/$DISTRI\_ssd
@@ -17,6 +17,7 @@ mount -o defaults,compress=lzo,usebackuproot,discard,ssd,inode_cache,space_cache
 mount -o defaults,compress=lzo,usebackuproot,autodefrag,subvol=var	LABEL="various"	$SSD/var
 mount -o defaults,compress=lzo,usebackuproot,autodefrag,ro,subvol=$DISTRI	LABEL="various"	$HDD
 
+echo "Syncing HDD to SSD." \n
 rsync 	 -ahAHSX \
 	 --delete \
 	 --info=progress2 \

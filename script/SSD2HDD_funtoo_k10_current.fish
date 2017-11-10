@@ -1,6 +1,6 @@
 #!/bin/fish
 #
-# funtoo_k10_current_backup.fish
+# SSD2HDD_funtoo_k10_current.fish
 
 set DISTRI funtoo_k10_current
 set SSD /mnt/$DISTRI\_ssd
