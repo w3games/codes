@@ -16,6 +16,7 @@ end
 mount -o defaults,compress=zstd,usebackuproot,discard,ssd,inode_cache,space_cache,subvol=$DISTRI	LABEL="ssd"	$SSD
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,subvol=var	LABEL="various"	$SSD/var
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,ro,subvol=$DISTRI	LABEL="various"	$HDD
+mount --rbind /boot $SSD/boot
 
 rsync 	 -ahAHSX \
 	 --delete \
@@ -27,6 +28,6 @@ rsync 	 -ahAHSX \
 
 cp /home/leaf/fstab_ssd $SSD/etc/fstab
 
-umount $SSD/var $SSD $HDD
+umount $SSD/boot $SSD/var $SSD $HDD
 rmdir  $SSD $HDD
 
