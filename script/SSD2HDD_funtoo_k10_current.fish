@@ -16,6 +16,7 @@ end
 mount -o defaults,compress=zstd,usebackuproot,discard,ssd,inode_cache,space_cache,subvol=$DISTRI	LABEL="ssd"	$SSD
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,subvol=var		LABEL="various"	$SSD/var
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,subvol=$DISTRI	LABEL="various"	$HDD
+mount --rbind /boot $SSD/boot
 
 echo "Syncing SSD to HDD." \n
 rsync 	 -ahAHSX \
@@ -27,6 +28,6 @@ rsync 	 -ahAHSX \
 
 cp $SSD/etc/fstab /home/leaf/fstab_ssd
 
-umount $SSD/var $SSD $HDD
+umount $SSD/boot $SSD/var $SSD $HDD
 rmdir  $SSD $HDD
 
