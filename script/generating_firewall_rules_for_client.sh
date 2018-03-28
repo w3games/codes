@@ -27,7 +27,7 @@ iptables -A INPUT -p icmp --icmp-type 3 -j ACCEPT
 iptables -A INPUT -p icmp --icmp-type 11 -j ACCEPT
 iptables -A INPUT -p icmp --icmp-type 12 -j ACCEPT
 iptables -A INPUT -p tcp --syn --dport 113 -j REJECT --reject-with tcp-reset
-iptables -A INPUT -s 192.168.0.0/24 -j ACCEPT
+iptables -A INPUT -s 192.168.0.0/16 -j ACCEPT
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #!/bin/bash
