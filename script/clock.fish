@@ -9,7 +9,7 @@ clear
 
 while tput cup $LINE 0
   # echo -n  (cat /proc/loadavg | cut -d ' ' -f1,2,3) " " (date +"%H:%M.%S   %F   %A ")
-  echo -n  (date +" %F  %A  %H:%M.%S ")  (cat /proc/loadavg | cut -d ' ' -f1,2,3)
+  echo -n  (cat /proc/loadavg | cut -d ' ' -f1,2,3) (date +" %F  %A  %H:%M.%S ")
   tput cup $LINE $COL
   sleep 1
 end
