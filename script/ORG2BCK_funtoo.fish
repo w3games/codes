@@ -14,7 +14,7 @@ for c in ORG BCK
   end
 end
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI,ro		LABEL="linux"	$ORG
-mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI_k10_current	LABEL="backup"	$BCK
+mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI\_k10_current	LABEL="backup"	$BCK
 mount --rbind /boot $ORG/boot
 
 echo "Syncing ORG to BCK." \n
