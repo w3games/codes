@@ -15,12 +15,13 @@ for c in MASTER BACKUP
 end
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI			LABEL="linux"	$MASTER
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI\_k10_current,ro	LABEL="backup"	$BACKUP
-mount --rbind /boot $MASTER/boot
+# mount --rbind /boot $MASTER/boot
 
 echo "Syncing from BACKUP to MASTER." \n
 rsync 	 -ahAHSX \
 	 --delete \
 	 --info=progress2 \
+	 --exclude boot/
 	 # --exclude etc/fstab \
 	 # --exclude var/tmp/ccache/ \
 	 $BACKUP /$MASTER/
