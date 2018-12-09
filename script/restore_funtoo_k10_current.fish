@@ -14,7 +14,7 @@ for c in MASTER BACKUP
   end
 end
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI			LABEL="linux"	$MASTER
-mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI_k10_current,ro	LABEL="backup"	$BACKUP
+mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI\_k10_current,ro	LABEL="backup"	$BACKUP
 mount --rbind /boot $MASTER/boot
 
 echo "Syncing from BACKUP to MASTER." \n
