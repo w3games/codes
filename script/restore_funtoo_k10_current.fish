@@ -22,6 +22,7 @@ rsync 	 -ahAHSX \
 	 --delete \
 	 --info=progress2 \
 	 --exclude boot/ \
+	 --exclude var/lib/portage/distfiles/ \
 	 # --exclude etc/fstab \
 	 # --exclude var/tmp/ccache/ \
 	 $BACKUP /$MASTER/
