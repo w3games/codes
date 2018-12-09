@@ -21,13 +21,13 @@ echo "Syncing from BACKUP to MASTER." \n
 rsync 	 -ahAHSX \
 	 --delete \
 	 --info=progress2 \
-	 --exclude boot/
+	 --exclude boot/ \
 	 # --exclude etc/fstab \
 	 # --exclude var/tmp/ccache/ \
 	 $BACKUP /$MASTER/
 
 cp /home/leaf/fstab_original $MASTER/etc/fstab
 
-umount $MASTER/boot $MASTER $BACKUP
+umount $MASTER $BACKUP
 rmdir  $MASTER $BACKUP
 
