@@ -24,6 +24,7 @@ rsync 	 -ahAHSX \
 	 --exclude boot/ \
 	 --exclude home/ \
 	 --exclude proc/ \
+	 --exclude srv/ \
 	 --exclude sys/ \
 	 --exclude tmp/ \
 	 --exclude var/lib/portage/distfiles/ \
