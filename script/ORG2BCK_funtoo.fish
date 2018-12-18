@@ -22,7 +22,8 @@ rsync 	 -ahAHSX \
 	 --delete \
 	 --info=progress2 \
 	 # --exclude etc/fstab \
-	 # --exclude var/tmp/ccache/ \
+	 --exclude root/.ccache/ \
+	 --exclude var/tmp/ccache/ \
 	 $ORG/ $BCK/
 
 cp $ORG/etc/fstab /home/leaf/fstab_original
