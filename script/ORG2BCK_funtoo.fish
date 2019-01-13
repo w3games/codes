@@ -15,7 +15,12 @@ for c in ORG BCK
 end
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI,ro		LABEL="linux"	$ORG
 mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI\_k10_current	LABEL="backup"	$BCK
-mount --rbind /boot $ORG/boot
+if mountpoint -q /boot
+  mount --rbind /boot $ORG/boot
+else
+  mount /boot
+  mount --rbind /boot $ORG/boot
+end
 
 echo "Syncing ORG to BCK." \n
 rsync 	 -ahAHSX \
@@ -28,6 +33,6 @@ rsync 	 -ahAHSX \
 
 cp $ORG/etc/fstab /home/leaf/fstab_original
 
-umount $ORG/boot $ORG $BCK
+umount $ORG/boot /boot $ORG $BCK
 rmdir  $ORG $BCK
 
