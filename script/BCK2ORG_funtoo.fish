@@ -13,18 +13,18 @@ for c in ORG BCK
     mkdir -p $$c
   end
 end
-mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI,ro		LABEL="linux"	$ORG
-mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI			LABEL="backup"	$BCK
+mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI		LABEL="linux"	$ORG
+mount -o defaults,compress=zstd,usebackuproot,autodefrag,inode_cache,space_cache,subvol=$DISTRI,ro	LABEL="backup"	$BCK
 mount --rbind /boot $ORG/boot
 
-echo "Syncing ORG to BCK." \n
+echo "Syncing BCK to ORG." \n
 rsync 	 -ahAHSX \
 	 --delete \
 	 --info=progress2 \
 	 # --exclude etc/fstab \
 	 # --exclude root/.ccache/ \
 	 # --exclude var/tmp/ccache/ \
-	 $ORG/ $BCK/
+	 $BCK/ $ORG/
 
 cp $ORG/etc/fstab /home/leaf/fstab_original
 
