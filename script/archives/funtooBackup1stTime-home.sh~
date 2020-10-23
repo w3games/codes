@@ -1,0 +1,36 @@
+#!/bin/bash
+# funtooBackup1stTime-home.sh
+#
+
+Backup=/mnt/backup
+Date=`date +%Y-%m%d-%H%M%S`
+
+umount $Backup 2> /dev/null
+mount $Backup
+
+# home
+rsync -avcHS --delete --progress --stats -e "ssh -c arcfour256" \
+--exclude="[Tt]rash/" --exclude="[Cc]ache*/" \
+/home/master/ $Backup/master/ 2>&1 | tee \
+/home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-$Date.log
+
+xz /home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-$Date.log
+chown master:master /home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-$Date.log.xz
+
+# subhome
+rsync -avcHS --delete --progress --stats -e "ssh -c arcfour256" \
+/mnt/subhome/ $Backup/subhome/ 2>&1 | tee \
+/home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-subhome-$Date.log
+
+xz /home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-subhome-$Date.log
+chown master:master /home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-subhome-$Date.log.xz
+
+# etc
+rsync -avcHS --delete --progress --stats -e "ssh -c arcfour256" \
+/etc/ $Backup/etc/ 2>&1 | tee \
+/home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-etc-$Date.log
+
+xz /home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-etc-$Date.log
+chown master:master /home/master/Documents/settings/linux-configurations/logs/funtooHomeBackup-etc-$Date.log.xz
+
+umount $Backup

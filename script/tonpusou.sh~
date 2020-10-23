@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# 東風荘用起動スクリプト
-
-cd ~/Documents/myPrograms/tonpusou
-java -jar tonpu-so_mj.jar
-cd ~

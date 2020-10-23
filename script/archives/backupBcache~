@@ -1,0 +1,15 @@
+#!/bin/fish
+#
+#backupBcache.sh
+
+for i in home
+    if not mountpoint -q /mnt/$i-bcache0
+        mount /mnt/$i-sda3
+    end
+end
+
+rsync -ahAHSX --info=progress2 --delete /home/ /mnt/home-sda3/
+
+for i in home
+    umount /mnt/$i-sda3
+end

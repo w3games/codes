@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Id$
+
+command="/usr/local/bin/proxy2ch"
+command_args="${PROXY2CHCONFIG}"
+pidfile="/run/proxy2ch.pid"
+
+depend() {
+	 need net
+}
+
+start() {
+	ebegin "Starting proxy2ch as daemon"
+	start-stop-daemon --start --user leaf --background --pidfile ${pidfile} --make-pidfile --exec ${command} -- ${command_args} >/dev/null
+	eend $?
+}
+
+stop() {
+       ebegin "Stopping proxy2ch"
+       start-stop-daemon --stop --user leaf --pidfile ${pidfile}
+       eend $?
+}

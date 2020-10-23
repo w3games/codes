@@ -1,0 +1,19 @@
+#!/bin/fish
+#
+#syncFromWindows
+
+set i windows
+set j game
+if not set -q SUDO_USER >/dev/null
+   set SUDO_USER leaf
+end
+
+if not mountpoint -q /mnt/$i
+   mount /mnt/$i
+end
+
+for k in Documents Pictures Music Videos
+    rsync -ahAHSX --info=progress2 --del --exclude desktop.ini --exclude Thumbs.db /mnt/$i/Users/$j/$k/ /home/$SUDO_USER/$k/
+end
+
+umount /mnt/$i

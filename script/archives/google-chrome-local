@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+/usr/bin/google-chrome "--audio-buffer-size=2048"
+

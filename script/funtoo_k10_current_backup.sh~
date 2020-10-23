@@ -1,0 +1,67 @@
+#!/bin/bash
+#funtoo_k10_current_backup.sh
+
+# Initialize
+#
+if test $SUDO_USER=""
+  then SUDO_USER=leaf
+fi
+
+# Configurations
+#
+BACKUPDIR="/home/$SUDO_USER/.backup"
+DISTRI="funtoo_k10_current"
+
+DATE=$(date +%Y-%m%d-%H%M%S)
+MNT="/mnt/$DISTRI"
+
+for i in $MNT $BACKUPDIR $BACKUPDIR/$DISTRI
+do
+  if ! test -d $i
+    then mkdir $i
+  fi
+done
+mountpoint -q $MNT || mount $MNT
+
+# Main
+#
+echo "Collecting data for rsync."
+cd $BACKUPDIR/$DISTRI
+for i in boot etc lib/modules usr/portage/packages var
+do
+  if not test -d $i
+    then mkdir -p $i
+  fi
+done
+
+mountpoint -q /boot || mount /boot
+rsync -ahAHSX \
+	--del \
+	--exclude grub/fonts/ \
+	--exclude grub/i386-pc/ \
+	--exclude grub/locale/ \
+	--exclude grub/themes/ \
+	--exclude grub/unifont.pf2 \
+	/boot/ boot/
+umount /boot
+
+for i in etc lib/modules usr/portage/packages
+do
+    rsync -ahAHSX --delete /$i/ $i/
+done
+
+rsync -ahAHSX --delete --exclude git-mirrors/ --exclude tmp/ccache/ --exclude lib/bitcoin/ /var/ var/
+
+echo "Syncing $DISTRI"
+cd ..
+rsync -ahAHSX \
+      --del \
+      --info=progress2 \
+      --log-file=/var/log/rsync.log \
+      $DISTRI/ $MNT/
+
+# Cleaning
+#
+umount $MNT
+rmdir  $MNT
+rm -r $BACKUPDIR/$DISTRI/usr/portage/packages

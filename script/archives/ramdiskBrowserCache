@@ -1,0 +1,59 @@
+#!/bin/fish
+#ramdiskBrowserCache
+#Sync Browser Caches Between Disk and Ramdisk
+
+set APPDATA		/dev/shm/APPDATA
+set FLASH_PLAYER	$HOME/.macromedia/Flash_Player
+set OPERA		$HOME/.opera/cache
+set FIREFOX		$HOME/.cache/mozilla/firefox
+set GOOGLE		$HOME/.cache/google-chrome/Default
+set CHROMIUM		$HOME/.cache/chromium/Default
+set CRONTAB		$HOME/Documents/settings/linux-configurations
+
+set ITEMS		FLASH_PLAYER FIREFOX CHROMIUM OPERA
+
+
+if not test -d $APPDATA
+  mkdir $APPDATA
+end
+
+if begin
+     for i in (seq (count $$ITEMS))
+       test -d $$ITEMS[$i]
+       not test -L $$ITEMS[$i]
+     end
+  end
+
+  for i in (seq (count $$ITEMS))
+    if not test -d $APPDATA/$i
+         mkdir $APPDATA/$i
+    end
+    echo -e (date +%T.%N | cut -c-12) Syncing Cache from $$ITEMS[$i]/ to $APPDATA/$ITEMS[$i]/
+    rsync -a --delete $$ITEMS[$i]/ $APPDATA/$ITEMS[$i]/
+    mv $$ITEMS[$i] $$ITEMS[$i]-renamed
+    ln -s $APPDATA/$i $$ITEMS[$i] ;
+  end
+
+  sudo -u $USER echo "0 */1 * * * /usr/local/bin/rsyncFromRamdiskToDisk" >> $CRONTAB/crontab
+  crontab $CRONTAB/crontab
+  echo -e (date +%T.%N | cut -c-12) Done!
+
+else if begin
+    for i in (seq (count $$ITEMS))
+      test -h $$ITEMS[$i]
+    end
+  end
+
+  sudo -u $USER sed -i '/rsyncFromRamdiskToDisk/d' $CRONTAB/crontab
+  crontab $CRONTAB/crontab
+
+  /usr/local/bin/rsyncFromRamdiskToDisk
+  
+  for i in (seq (count $$ITEMS))
+      rm $$ITEMS[$i]
+      mv $$ITEMS[$i]-renamed $$ITEMS[$i] ;
+  end 
+
+# rm -r $APPDATA
+  echo -e (date +%T.%N | cut -c-12) Done!
+end

@@ -1,0 +1,39 @@
+#!/sbin/runscript
+
+extra_commands="init"
+extra_started_commands=""
+
+init() {
+ opts="-c /etc/httpd.conf"
+}
+
+# 依存関係
+depend() {
+ need net
+}
+
+# サービスを起動す必要なコマンド群
+start() {
+ init
+ ebegin "Starting BusyBox HTTP Server"
+ echo "Options: busybox httpd ${opts}"
+ start-stop-daemon --start --exec /bin/busybox httpd -- ${opts}
+ /usr/bin/pgrep -x -u 0 -P 1 busybox > /var/run/busybox-httpd.pid
+ eend $?
+}
+
+# サービスを停止す必要なコマンド群
+stop() {
+ ebegin "Stopping BusyBox HTTP Server"
+ unset SERVER_NAME
+ start-stop-daemon --retry 20 --stop --exec /bin/busybox --pidfile /var/run/busybox-httpd.pid
+ eend $?
+}
+
+# サービスを再スタートコマンド群
+restart() {
+ stop
+ sleep 5
+ start
+}
+

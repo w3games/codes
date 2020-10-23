@@ -1,0 +1,549 @@
+sending incremental file list
+./
+deleting .serverauth.5506
+.bash_history
+       32768  18%    0.00kB/s    0:00:00      175888 100%   34.12MB/s    0:00:00 (xfer#1, to-check=1047/1051)
+.lesshst
+         874 100%  213.38kB/s    0:00:00         874 100%  213.38kB/s    0:00:00 (xfer#2, to-check=1041/1051)
+.serverauth.4443
+         162 100%   39.55kB/s    0:00:00         162 100%   39.55kB/s    0:00:00 (xfer#3, to-check=1040/1051)
+desktop.ini
+         402 100%   98.14kB/s    0:00:00         402 100%   98.14kB/s    0:00:00 (xfer#4, to-check=1036/1051)
+w3game -> /mnt/windows/Documents and Settings/w3game
+world
+        1304 100%  318.36kB/s    0:00:00        1304 100%  318.36kB/s    0:00:00 (xfer#5, to-check=1026/1051)
+.cache/dmenu_run
+       14052 100%   55.78kB/s    0:00:00       14052 100%   55.78kB/s    0:00:00 (xfer#6, to-check=1009/1175)
+.config/ibus/bus/
+.config/ibus/bus/377b104b9644499d4d6aeae900009e0c-unix-0
+         168 100%    0.66kB/s    0:00:00         168 100%    0.66kB/s    0:00:00 (xfer#7, to-check=1001/1183)
+.dbus/session-bus/377b104b9644499d4d6aeae900009e0c-0
+         463 100%    1.83kB/s    0:00:00         463 100%    1.83kB/s    0:00:00 (xfer#8, to-check=1000/1187)
+.gconf/
+.local/share/
+.local/share/recently-used.xbel
+        7764 100%   26.60kB/s    0:00:00        7764 100%   26.60kB/s    0:00:00 (xfer#9, to-check=1006/1208)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/219.94.193.133/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/219.94.193.133/kton.sol
+          42 100%    0.13kB/s    0:00:00          42 100%    0.13kB/s    0:00:00 (xfer#10, to-check=1002/1271)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/219.94.193.133/crn3dg.swf/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/49.212.32.178/dmtnsp.swf/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/49.212.32.178/dmtnsp.swf/gmdat.sol
+         101 100%    0.29kB/s    0:00:00         101 100%    0.29kB/s    0:00:00 (xfer#11, to-check=1008/1284)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/imgcdn.pandora.tv/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/imgcdn.pandora.tv/GUID_SharedObject.sol
+          79 100%    0.22kB/s    0:00:00          79 100%    0.22kB/s    0:00:00 (xfer#12, to-check=1000/1312)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/mail.google.com/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/mail.google.com/wakeup.sol
+          37 100%    0.10kB/s    0:00:00          37 100%    0.10kB/s    0:00:00 (xfer#13, to-check=1009/1341)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/nissen.co.jp/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/jp.nicovideo.nico#/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/jp.nicovideo.nico#/player.models.PlayDelayInfo.sol
+         234 100%    0.00kB/s    0:00:00         234 100%    0.00kB/s    0:00:00 (xfer#14, to-check=1002/1413)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/jp.nicovideo.nicopla#/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/jp.nicovideo.nicopla#/yer.models.WatchReloadJudge.sol
+         111 100%   54.20kB/s    0:00:00         111 100%   54.20kB/s    0:00:00 (xfer#15, to-check=1010/1424)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/jp.nicovideo.nicoplayer.#/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/rush_hour_play_count.sol
+          74 100%    9.03kB/s    0:00:00          74 100%    9.03kB/s    0:00:00 (xfer#16, to-check=1013/1446)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/http___flapi_nicovi#/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/http___flapi_nicovi#/deo_jp_api_getchecklist_t=1.sol
+         203 100%   18.02kB/s    0:00:00         203 100%   18.02kB/s    0:00:00 (xfer#17, to-check=1008/1457)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/jp.nicovideo.ni#/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/jp.nicovideo.ni#/coplayer.models.api.playlen.sol
+          98 100%    8.70kB/s    0:00:00          98 100%    8.70kB/s    0:00:00 (xfer#18, to-check=1003/1457)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/jp.nicovideo.nicopla#/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/jp.nicovideo.nicopla#/yer.models.fileter._NGCache.sol
+         117 100%    8.16kB/s    0:00:00         117 100%    8.16kB/s    0:00:00 (xfer#19, to-check=1008/1468)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/res.nimg.jp/swf/player/cross_sharedobject.swf/jp.nicovideo.nicoplayer.NicoPl#/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/s.ytimg.com/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/s.ytimg.com/videostats.sol
+         275 100%    8.14kB/s    0:00:00         275 100%    8.14kB/s    0:00:00 (xfer#20, to-check=1003/1468)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/static-cdn1.ustream.tv/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/static-cdn1.ustream.tv/com.conviva.livePass.sol
+         179 100%    4.86kB/s    0:00:00         179 100%    4.86kB/s    0:00:00 (xfer#21, to-check=1003/1479)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/static-cdn1.ustream.tv/flash.viewer.sol
+       17254 100%  300.89kB/s    0:00:00       17254 100%  300.89kB/s    0:00:00 (xfer#22, to-check=1002/1479)
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/www.kickstarter.com/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/www.nissen.co.jp/
+.macromedia/Flash_Player/#SharedObjects/ZAZ9SC4K/www.nissen.co.jp/sharedHistoryObject.sol
+        1119 100%   11.15kB/s    0:00:00        1119 100%   11.04kB/s    0:00:00 (xfer#23, to-check=1009/1501)
+.macromedia/Flash_Player/macromedia.com/support/flashplayer/sys/
+.macromedia/Flash_Player/macromedia.com/support/flashplayer/sys/settings.sol
+        1721 100%   13.03kB/s    0:00:00        1721 100%   13.03kB/s    0:00:00 (xfer#24, to-check=1072/1579)
+.macromedia/Flash_Player/macromedia.com/support/flashplayer/sys/#imgcdn.pandora.tv/
+.macromedia/Flash_Player/macromedia.com/support/flashplayer/sys/#imgcdn.pandora.tv/settings.sol
+          87 100%    0.24kB/s    0:00:00          87 100%    0.24kB/s    0:00:00 (xfer#25, to-check=1008/1601)
+.macromedia/Flash_Player/macromedia.com/support/flashplayer/sys/#www.kickstarter.com/
+.macromedia/Flash_Player/macromedia.com/support/flashplayer/sys/#www.kickstarter.com/settings.sol
+          89 100%    0.24kB/s    0:00:00          89 100%    0.24kB/s    0:00:00 (xfer#26, to-check=1004/1634)
+.mozc/
+.mozc/.history.db
+       13184 100%   33.70kB/s    0:00:00       13184 100%   33.70kB/s    0:00:00 (xfer#27, to-check=1009/1645)
+.mozc/.registry.db
+        4022 100%   10.26kB/s    0:00:00        4022 100%   10.26kB/s    0:00:00 (xfer#28, to-check=1008/1645)
+.mozc/.session_japanese.ipc
+          54 100%    0.14kB/s    0:00:00          54 100%    0.14kB/s    0:00:00 (xfer#29, to-check=1006/1645)
+.mozc/segment.db
+       32768  10%   80.40kB/s    0:00:03      320012 100%  767.84kB/s    0:00:00 (xfer#30, to-check=1003/1645)
+.mozilla/firefox/m97s5b1q.10/
+.mozilla/firefox/m97s5b1q.10/addons.sqlite
+       32768   6%   62.50kB/s    0:00:07      491520 100%  909.09kB/s    0:00:00 (xfer#31, to-check=1047/1700)
+.mozilla/firefox/m97s5b1q.10/blocklist.xml
+       22042 100%   36.86kB/s    0:00:00       22042 100%   36.86kB/s    0:00:00 (xfer#32, to-check=1046/1700)
+.mozilla/firefox/m97s5b1q.10/cert8.db
+       32768  25%   52.55kB/s    0:00:01      131072 100%  209.15kB/s    0:00:00 (xfer#33, to-check=1045/1700)
+.mozilla/firefox/m97s5b1q.10/content-prefs.sqlite
+       32768  14%   48.63kB/s    0:00:04      229376 100%  337.35kB/s    0:00:00 (xfer#34, to-check=1042/1700)
+.mozilla/firefox/m97s5b1q.10/cookies.sqlite
+       32768   6%   46.51kB/s    0:00:10      524288 100%  729.34kB/s    0:00:00 (xfer#35, to-check=1041/1700)
+.mozilla/firefox/m97s5b1q.10/downloads.sqlite
+       32768  50%   45.01kB/s    0:00:00       65536 100%   89.89kB/s    0:00:00 (xfer#36, to-check=1040/1700)
+.mozilla/firefox/m97s5b1q.10/formhistory.sqlite
+       32768  20%   44.02kB/s    0:00:02      163840 100%  218.88kB/s    0:00:00 (xfer#37, to-check=1035/1700)
+.mozilla/firefox/m97s5b1q.10/localstore.rdf
+       16140 100%   21.50kB/s    0:00:00       16140 100%   21.50kB/s    0:00:00 (xfer#38, to-check=1033/1700)
+.mozilla/firefox/m97s5b1q.10/permissions.sqlite
+       32768  50%   43.54kB/s    0:00:00       65536 100%   86.96kB/s    0:00:00 (xfer#39, to-check=1031/1700)
+.mozilla/firefox/m97s5b1q.10/places.sqlite
+       32768   0%   41.08kB/s    0:04:14     3604480  34%    3.44MB/s    0:00:01    10485760 100%    7.70MB/s    0:00:01 (xfer#40, to-check=1030/1700)
+.mozilla/firefox/m97s5b1q.10/prefs.js
+       14299 100%   46.70kB/s    0:00:00       14299 100%   46.70kB/s    0:00:00 (xfer#41, to-check=1028/1700)
+.mozilla/firefox/m97s5b1q.10/search.sqlite
+       32768  50%   97.56kB/s    0:00:00       65536 100%  194.53kB/s    0:00:00 (xfer#42, to-check=1026/1700)
+.mozilla/firefox/m97s5b1q.10/sessionstore.bak
+       32768  93%   92.75kB/s    0:00:00       35023 100%   99.14kB/s    0:00:00 (xfer#43, to-check=1023/1700)
+.mozilla/firefox/m97s5b1q.10/sessionstore.js
+       20330 100%   57.38kB/s    0:00:00       20330 100%   57.38kB/s    0:00:00 (xfer#44, to-check=1022/1700)
+.mozilla/firefox/m97s5b1q.10/signons.sqlite
+       32768  11%   89.89kB/s    0:00:02      294912 100%  791.21kB/s    0:00:00 (xfer#45, to-check=1021/1700)
+.mozilla/firefox/m97s5b1q.10/urlclassifier.pset
+       32768   2%   83.55kB/s    0:00:16     1409588 100%    3.16MB/s    0:00:00 (xfer#46, to-check=1019/1700)
+.mozilla/firefox/m97s5b1q.10/urlclassifier3.sqlite
+       32768   0%   72.23kB/s    0:10:52    14647296  31%   13.97MB/s    0:00:02    40370176  85%   19.26MB/s    0:00:00    47185920 100%   20.45MB/s    0:00:02 (xfer#47, to-check=1018/1700)
+.mozilla/firefox/m97s5b1q.10/adblockplus/
+.mozilla/firefox/m97s5b1q.10/adblockplus/elemhide.css
+       32768   1%   36.87kB/s    0:00:55     2094071 100%    2.12MB/s    0:00:00 (xfer#48, to-check=1013/1711)
+.mozilla/firefox/m97s5b1q.10/adblockplus/patterns-backup1.ini
+       32768   2%   33.61kB/s    0:00:33     1156757 100%    1.11MB/s    0:00:00 (xfer#49, to-check=1012/1711)
+.mozilla/firefox/m97s5b1q.10/adblockplus/patterns-backup2.ini
+       32768   2%   31.34kB/s    0:00:35       65536   5%   62.62kB/s    0:00:17     1148950 100%    1.04MB/s    0:00:01 (xfer#50, to-check=1011/1711)
+.mozilla/firefox/m97s5b1q.10/adblockplus/patterns-backup3.ini
+       32768   2%  561.40kB/s    0:00:01     1148878 100%   11.41MB/s    0:00:00 (xfer#51, to-check=1010/1711)
+.mozilla/firefox/m97s5b1q.10/adblockplus/patterns-backup4.ini
+       32768   2%  262.30kB/s    0:00:04     1148877 100%    7.07MB/s    0:00:00 (xfer#52, to-check=1009/1711)
+.mozilla/firefox/m97s5b1q.10/adblockplus/patterns-backup5.ini
+       32768   2%  178.77kB/s    0:00:06     1145328 100%    5.13MB/s    0:00:00 (xfer#53, to-check=1008/1711)
+.mozilla/firefox/m97s5b1q.10/adblockplus/patterns.ini
+       32768   2%  131.15kB/s    0:00:08     1156757 100%    3.71MB/s    0:00:00 (xfer#54, to-check=1007/1711)
+.mozilla/firefox/m97s5b1q.10/bookmarkbackups/
+deleting .mozilla/firefox/m97s5b1q.10/bookmarkbackups/bookmarks-2012-04-09.json
+deleting .mozilla/firefox/m97s5b1q.10/bookmarkbackups/bookmarks-2012-04-08.json
+.mozilla/firefox/m97s5b1q.10/bookmarkbackups/bookmarks-2012-05-14.json
+       32768  69%   94.40kB/s    0:00:00       47022 100%  135.46kB/s    0:00:00 (xfer#55, to-check=1008/1722)
+.mozilla/firefox/m97s5b1q.10/bookmarkbackups/bookmarks-2012-05-16.json
+       32768  68%   90.40kB/s    0:00:00       47541 100%  131.15kB/s    0:00:00 (xfer#56, to-check=1007/1722)
+.mozilla/firefox/m97s5b1q.10/eowfiles/
+.mozilla/firefox/m97s5b1q.10/eowfiles/eow.sqlite
+       32768  25%   88.15kB/s    0:00:01      131072 100%  349.73kB/s    0:00:00 (xfer#57, to-check=1006/1722)
+.mozilla/firefox/m97s5b1q.10/startupCache/startupCache.8.little
+       32768   2%   59.26kB/s    0:00:21     1288887 100%    2.03MB/s    0:00:00 (xfer#58, to-check=1025/1854)
+.mozilla/firefox/m97s5b1q.10/weave/
+.mozilla/firefox/m97s5b1q.10/weave/changes/
+.mozilla/firefox/m97s5b1q.10/weave/changes/history.json
+          53 100%    0.09kB/s    0:00:00          53 100%    0.09kB/s    0:00:00 (xfer#59, to-check=1013/1854)
+.mozilla/firefox/m97s5b1q.10/weave/failed/
+.opera/
+deleting .opera/urlfilter.ini.pre_sync
+.opera/autoupdate_response.xml
+         859 100%    0.00kB/s    0:00:00         859 100%    0.00kB/s    0:00:00 (xfer#60, to-check=3389/5265)
+.opera/bookmarks.adr
+       32768  47%  711.11kB/s    0:00:00       69318 100%    1.44MB/s    0:00:00 (xfer#61, to-check=3388/5265)
+.opera/browser.js
+       32768  28%  347.83kB/s    0:00:00      115015 100%    1.17MB/s    0:00:00 (xfer#62, to-check=3386/5265)
+.opera/cookies4.dat
+       32768  11%  333.33kB/s    0:00:00      291335 100%    2.70MB/s    0:00:00 (xfer#63, to-check=3384/5265)
+.opera/download.dat
+         338 100%    3.20kB/s    0:00:00         338 100%    3.20kB/s    0:00:00 (xfer#64, to-check=3383/5265)
+.opera/global_history.dat
+       32768  12%  304.76kB/s    0:00:00      256555 100%    2.20MB/s    0:00:00 (xfer#65, to-check=3381/5265)
+.opera/operaprefs.ini
+        3771 100%   33.18kB/s    0:00:00        3771 100%   33.18kB/s    0:00:00 (xfer#66, to-check=3372/5265)
+.opera/oprand.dat
+        4096 100%   36.04kB/s    0:00:00        4096 100%   36.04kB/s    0:00:00 (xfer#67, to-check=3370/5265)
+.opera/opssl6.dat
+       11522 100%  100.46kB/s    0:00:00       11522 100%  100.46kB/s    0:00:00 (xfer#68, to-check=3369/5265)
+.opera/override_downloaded.ini
+        6748 100%   58.84kB/s    0:00:00        6748 100%   58.84kB/s    0:00:00 (xfer#69, to-check=3363/5265)
+.opera/search_field_history.dat
+        8461 100%   73.77kB/s    0:00:00        8461 100%   73.77kB/s    0:00:00 (xfer#70, to-check=3359/5265)
+.opera/tasks.xml
+         420 100%    3.66kB/s    0:00:00         420 100%    3.66kB/s    0:00:00 (xfer#71, to-check=3356/5265)
+.opera/typed_history.xml
+       15855 100%  137.02kB/s    0:00:00       15855 100%  137.02kB/s    0:00:00 (xfer#72, to-check=3354/5265)
+.opera/urlfilter.ini
+       32768  15%  103.90kB/s    0:00:01      208980 100%  652.02kB/s    0:00:00 (xfer#73, to-check=3350/5265)
+.opera/urlfilter_log.txt
+         854 100%    2.66kB/s    0:00:00         854 100%    2.66kB/s    0:00:00 (xfer#74, to-check=3349/5265)
+.opera/wand.dat
+       11228 100%   35.03kB/s    0:00:00       11228 100%   35.03kB/s    0:00:00 (xfer#75, to-check=3347/5265)
+.opera/application_cache/dcdbff86bc8a002c2186e945eb06850f/
+.opera/application_cache/dcdbff86bc8a002c2186e945eb06850f/dcache4.url
+       32768  25%   88.89kB/s    0:00:01      130425 100%  350.88kB/s    0:00:00 (xfer#76, to-check=3325/5265)
+.opera/application_cache/ef39126445038b0daf271485b4dff79c/
+.opera/application_cache/ef39126445038b0daf271485b4dff79c/dcache4.url
+        6009 100%   16.17kB/s    0:00:00        6009 100%   16.17kB/s    0:00:00 (xfer#77, to-check=3302/5265)
+.opera/application_cache/mcache/
+.opera/application_cache/mcache/dcache4.url
+        1488 100%    4.00kB/s    0:00:00        1488 100%    4.00kB/s    0:00:00 (xfer#78, to-check=3284/5265)
+.opera/icons/
+deleting .opera/icons/http%3A%2F%2Fwebcache.googleusercontent.com%2Ffavicon.png
+.opera/icons/2chlog.com.idx
+         146 100%    0.00kB/s    0:00:00         146 100%    0.00kB/s    0:00:00 (xfer#79, to-check=4270/6269)
+.opera/icons/accounts.google.com.idx
+        2153 100%    2.05MB/s    0:00:00        2153 100%    2.05MB/s    0:00:00 (xfer#80, to-check=4257/6269)
+.opera/icons/ameblo.jp.idx
+       20874 100%   19.91MB/s    0:00:00       20874 100%   19.91MB/s    0:00:00 (xfer#81, to-check=4243/6269)
+.opera/icons/auctions.search.yahoo.co.jp.idx
+        1460 100%    1.39MB/s    0:00:00        1460 100%    1.39MB/s    0:00:00 (xfer#82, to-check=4219/6269)
+.opera/icons/blogs.yahoo.co.jp.idx
+         367 100%  358.40kB/s    0:00:00         367 100%  358.40kB/s    0:00:00 (xfer#83, to-check=4170/6269)
+.opera/icons/channel.pandora.tv.idx
+         244 100%  238.28kB/s    0:00:00         244 100%  238.28kB/s    0:00:00 (xfer#84, to-check=4141/6269)
+.opera/icons/cocoloa.gameheart.jp.idx
+          83 100%   81.05kB/s    0:00:00          83 100%   81.05kB/s    0:00:00 (xfer#85, to-check=4126/6269)
+.opera/icons/dailynews.yahoo.co.jp.idx
+        3617 100%    3.45MB/s    0:00:00        3617 100%    3.45MB/s    0:00:00 (xfer#86, to-check=4106/6269)
+.opera/icons/eow.alc.co.jp.idx
+         628 100%  613.28kB/s    0:00:00         628 100%  613.28kB/s    0:00:00 (xfer#87, to-check=4043/6269)
+.opera/icons/geocities.yahoo.co.jp.idx
+          97 100%   94.73kB/s    0:00:00          97 100%   94.73kB/s    0:00:00 (xfer#88, to-check=3965/6269)
+.opera/icons/gigazine.jp.idx
+        1098 100%    1.05MB/s    0:00:00        1098 100%    1.05MB/s    0:00:00 (xfer#89, to-check=3959/6269)
+.opera/icons/grandjump.shueisha.co.jp.idx
+         100 100%   97.66kB/s    0:00:00         100 100%   97.66kB/s    0:00:00 (xfer#90, to-check=3942/6269)
+.opera/icons/headlines.yahoo.co.jp.idx
+         930 100%  908.20kB/s    0:00:00         930 100%  908.20kB/s    0:00:00 (xfer#91, to-check=3928/6269)
+.opera/icons/http%3A%2F%2F2chlog.com%2F2ch%2Flive%2Fliventv%2Fimage%2F1337352412-0044-001.png
+         935 100%   14.97kB/s    0:00:00         935 100%   14.97kB/s    0:00:00 (xfer#92, to-check=3885/6269)
+.opera/icons/http%3A%2F%2F2chspa.com%2Fimage%2Ffavicon.png
+         166 100%    2.66kB/s    0:00:00         166 100%    2.66kB/s    0:00:00 (xfer#93, to-check=3883/6269)
+.opera/icons/http%3A%2F%2Fchannel.pandora.tv%2Ffavicon.png
+         733 100%   11.73kB/s    0:00:00         733 100%   11.73kB/s    0:00:00 (xfer#94, to-check=3729/6269)
+.opera/icons/http%3A%2F%2Fcocoloa.gameheart.jp%2Fimg%2Fcocoloa.png
+         800 100%   12.81kB/s    0:00:00         800 100%   12.81kB/s    0:00:00 (xfer#95, to-check=3714/6269)
+.opera/icons/http%3A%2F%2Fgeocities.yahoo.co.jp%2Ffavicon.png
+         128 100%    2.05kB/s    0:00:00         128 100%    2.05kB/s    0:00:00 (xfer#96, to-check=3549/6269)
+.opera/icons/http%3A%2F%2Fgigazine.jp%2Fimg%2F2012%2F05%2F21%2Ftobita-shinchi%2FDSC_2928.png
+         962 100%   15.40kB/s    0:00:00         962 100%   15.40kB/s    0:00:00 (xfer#97, to-check=3537/6269)
+.opera/icons/http%3A%2F%2Fgrandjump.shueisha.co.jp%2Ffavicon.png
+         460 100%    7.36kB/s    0:00:00         460 100%    7.36kB/s    0:00:00 (xfer#98, to-check=3522/6269)
+.opera/icons/http%3A%2F%2Fi.imgur.com%2FZYX70.png
+         891 100%   14.26kB/s    0:00:00         891 100%   14.26kB/s    0:00:00 (xfer#99, to-check=3475/6269)
+.opera/icons/http%3A%2F%2Fimepic.jp%2Ffavicon.png
+         460 100%    7.36kB/s    0:00:00         460 100%    7.36kB/s    0:00:00 (xfer#100, to-check=3442/6269)
+.opera/icons/http%3A%2F%2Fmemory.dataram.com%2Fimages%2Ffavicon.png
+         491 100%    7.86kB/s    0:00:00         491 100%    7.86kB/s    0:00:00 (xfer#101, to-check=3236/6269)
+.opera/icons/http%3A%2F%2Fmovie.nifty.com%2Ffavicon.png
+         626 100%   10.02kB/s    0:00:00         626 100%   10.02kB/s    0:00:00 (xfer#102, to-check=3198/6269)
+.opera/icons/http%3A%2F%2Fninzen.jp%2Ffavicon.png
+         293 100%    4.69kB/s    0:00:00         293 100%    4.69kB/s    0:00:00 (xfer#103, to-check=3162/6269)
+.opera/icons/http%3A%2F%2Fp27.everytown.info%2Ffavicon.png
+         482 100%    7.72kB/s    0:00:00         482 100%    7.72kB/s    0:00:00 (xfer#104, to-check=3130/6269)
+.opera/icons/http%3A%2F%2Fsaga.bg-time.jp%2Fcommon%2Fimages%2Ffavicon.png
+         624 100%    9.99kB/s    0:00:00         624 100%    9.99kB/s    0:00:00 (xfer#105, to-check=3006/6269)
+.opera/icons/http%3A%2F%2Fsites.amd.com%2FStyle%20Library%2FImages%2Funderground%2Ffavicon.png
+         744 100%   11.91kB/s    0:00:00         744 100%   11.91kB/s    0:00:00 (xfer#106, to-check=2975/6269)
+.opera/icons/http%3A%2F%2Fstore.gunze.co.jp%2Ffront%2Fshared%2Fimages%2Ffavicon.png
+         273 100%    4.37kB/s    0:00:00         273 100%    4.37kB/s    0:00:00 (xfer#107, to-check=2938/6269)
+.opera/icons/http%3A%2F%2Fsupport.amd.com%2FStyle%20Library%2FImages%2Ffavicon.png
+         209 100%    3.35kB/s    0:00:00         209 100%    3.35kB/s    0:00:00 (xfer#108, to-check=2933/6269)
+.opera/icons/http%3A%2F%2Fsurf.suckless.org%2Ffavicon.png
+          90 100%    1.44kB/s    0:00:00          90 100%    1.42kB/s    0:00:00 (xfer#109, to-check=2929/6269)
+.opera/icons/http%3A%2F%2Fsyosetu637.blog.fc2.com%2Ffavicon.png
+         254 100%    4.00kB/s    0:00:00         254 100%    4.00kB/s    0:00:00 (xfer#110, to-check=2926/6269)
+.opera/icons/http%3A%2F%2Ftools.suckless.org%2Ffavicon.png
+          90 100%    1.42kB/s    0:00:00          90 100%    1.42kB/s    0:00:00 (xfer#111, to-check=2904/6269)
+.opera/icons/http%3A%2F%2Ftwitter.com%2Fphoenix%2Fiefavicon.png
+         522 100%    8.22kB/s    0:00:00         522 100%    8.22kB/s    0:00:00 (xfer#112, to-check=2880/6269)
+.opera/icons/http%3A%2F%2Fup3.viploader.net%2Fnews%2Fsrc%2Fvlnews054908.png
+         981 100%   15.45kB/s    0:00:00         981 100%   15.45kB/s    0:00:00 (xfer#113, to-check=2842/6269)
+.opera/icons/http%3A%2F%2Fweather.yahoo.co.jp%2Ffavicon.png
+         128 100%    2.02kB/s    0:00:00         128 100%    2.02kB/s    0:00:00 (xfer#114, to-check=2813/6269)
+.opera/icons/http%3A%2F%2Fwww.dotup.org%2Fuploda%2Fwww.dotup.org2987551.png
+         876 100%   13.80kB/s    0:00:00         876 100%   13.80kB/s    0:00:00 (xfer#115, to-check=2639/6269)
+.opera/icons/http%3A%2F%2Fwww.nissen.jp%2Ffavicon.png
+         554 100%    8.73kB/s    0:00:00         554 100%    8.73kB/s    0:00:00 (xfer#116, to-check=2413/6269)
+.opera/icons/http%3A%2F%2Fwww.ntwind.com%2Ffavicon.png
+         806 100%   12.70kB/s    0:00:00         806 100%   12.70kB/s    0:00:00 (xfer#117, to-check=2408/6269)
+.opera/icons/http%3A%2F%2Fwww.s-manga.net%2Ffavicon.png
+         593 100%    9.34kB/s    0:00:00         593 100%    9.34kB/s    0:00:00 (xfer#118, to-check=2339/6269)
+.opera/icons/http%3A%2F%2Fzasshi.news.yahoo.co.jp%2Ffavicon.png
+         128 100%    2.02kB/s    0:00:00         128 100%    2.02kB/s    0:00:00 (xfer#119, to-check=2172/6269)
+.opera/icons/https%3A%2F%2Faccounts.google.com%2Ffavicon.png
+         901 100%   14.19kB/s    0:00:00         901 100%   14.19kB/s    0:00:00 (xfer#120, to-check=2165/6269)
+.opera/icons/https%3A%2F%2Fsplunk.net%2Fw%2Ftemplates%2Flight%2Fimages%2Ffavicon.png
+         631 100%    9.94kB/s    0:00:00         631 100%    9.94kB/s    0:00:00 (xfer#121, to-check=2109/6269)
+.opera/icons/i.imgur.com.idx
+         726 100%   11.44kB/s    0:00:00         726 100%   11.44kB/s    0:00:00 (xfer#122, to-check=2078/6269)
+.opera/icons/imepic.jp.idx
+          70 100%    1.10kB/s    0:00:00          70 100%    1.10kB/s    0:00:00 (xfer#123, to-check=2065/6269)
+.opera/icons/ja.wikipedia.org.idx
+       23654 100%   78.84kB/s    0:00:00       23654 100%   78.84kB/s    0:00:00 (xfer#124, to-check=2037/6269)
+.opera/icons/kakaku.com.idx
+       28055 100%   81.78kB/s    0:00:00       28055 100%   81.78kB/s    0:00:00 (xfer#125, to-check=2009/6269)
+.opera/icons/kohada.2ch.net.idx
+         399 100%    1.16kB/s    0:00:00         399 100%    1.16kB/s    0:00:00 (xfer#126, to-check=1989/6269)
+.opera/icons/login.live.com.idx
+        2565 100%    7.48kB/s    0:00:00        2565 100%    7.48kB/s    0:00:00 (xfer#127, to-check=1944/6269)
+.opera/icons/logsoku.com.idx
+         717 100%    2.09kB/s    0:00:00         717 100%    2.09kB/s    0:00:00 (xfer#128, to-check=1941/6269)
+.opera/icons/mail.google.com.idx
+        1199 100%    3.50kB/s    0:00:00        1199 100%    3.50kB/s    0:00:00 (xfer#129, to-check=1934/6269)
+.opera/icons/memory.dataram.com.idx
+         120 100%    0.35kB/s    0:00:00         120 100%    0.35kB/s    0:00:00 (xfer#130, to-check=1912/6269)
+.opera/icons/movie.nifty.com.idx
+          76 100%    0.22kB/s    0:00:00          76 100%    0.22kB/s    0:00:00 (xfer#131, to-check=1889/6269)
+.opera/icons/news.goo.ne.jp.idx
+        7783 100%   22.62kB/s    0:00:00        7783 100%   22.62kB/s    0:00:00 (xfer#132, to-check=1867/6269)
+.opera/icons/news.mynavi.jp.idx
+        2564 100%    7.45kB/s    0:00:00        2564 100%    7.45kB/s    0:00:00 (xfer#133, to-check=1862/6269)
+.opera/icons/news.nifty.com.idx
+       25345 100%   73.23kB/s    0:00:00       25345 100%   73.23kB/s    0:00:00 (xfer#134, to-check=1860/6269)
+.opera/icons/ninzen.jp.idx
+          55 100%    0.16kB/s    0:00:00          55 100%    0.16kB/s    0:00:00 (xfer#135, to-check=1852/6269)
+.opera/icons/oshiete.goo.ne.jp.idx
+        1586 100%    4.58kB/s    0:00:00        1586 100%    4.58kB/s    0:00:00 (xfer#136, to-check=1825/6269)
+.opera/icons/p27.everytown.info.idx
+         105 100%    0.30kB/s    0:00:00         105 100%    0.30kB/s    0:00:00 (xfer#137, to-check=1820/6269)
+.opera/icons/pc.nikkeibp.co.jp.idx
+         308 100%    0.89kB/s    0:00:00         308 100%    0.89kB/s    0:00:00 (xfer#138, to-check=1801/6269)
+.opera/icons/photo.sankei.jp.msn.com.idx
+        5607 100%   16.15kB/s    0:00:00        5607 100%   16.15kB/s    0:00:00 (xfer#139, to-check=1790/6269)
+.opera/icons/saga.bg-time.jp.idx
+          85 100%    0.24kB/s    0:00:00          85 100%    0.24kB/s    0:00:00 (xfer#140, to-check=1733/6269)
+.opera/icons/sankei.jp.msn.com.idx
+       32768  87%   93.57kB/s    0:00:00       37244 100%  106.35kB/s    0:00:00 (xfer#141, to-check=1728/6269)
+.opera/icons/secure.nicovideo.jp.idx
+         563 100%    1.61kB/s    0:00:00         563 100%    1.61kB/s    0:00:00 (xfer#142, to-check=1716/6269)
+.opera/icons/shop.gnavi.co.jp.idx
+         282 100%    0.81kB/s    0:00:00         282 100%    0.81kB/s    0:00:00 (xfer#143, to-check=1702/6269)
+.opera/icons/sites.amd.com.idx
+         145 100%    0.41kB/s    0:00:00         145 100%    0.41kB/s    0:00:00 (xfer#144, to-check=1692/6269)
+.opera/icons/splunk.net.idx
+         104 100%    0.30kB/s    0:00:00         104 100%    0.30kB/s    0:00:00 (xfer#145, to-check=1679/6269)
+.opera/icons/store.gunze.co.jp.idx
+         251 100%    0.72kB/s    0:00:00         251 100%    0.72kB/s    0:00:00 (xfer#146, to-check=1674/6269)
+.opera/icons/support.amd.com.idx
+         121 100%    0.35kB/s    0:00:00         121 100%    0.35kB/s    0:00:00 (xfer#147, to-check=1666/6269)
+.opera/icons/surf.suckless.org.idx
+          71 100%    0.20kB/s    0:00:00          71 100%    0.20kB/s    0:00:00 (xfer#148, to-check=1661/6269)
+.opera/icons/syosetu637.blog.fc2.com.idx
+         100 100%    0.29kB/s    0:00:00         100 100%    0.29kB/s    0:00:00 (xfer#149, to-check=1658/6269)
+.opera/icons/togetter.com.idx
+         280 100%    0.80kB/s    0:00:00         280 100%    0.80kB/s    0:00:00 (xfer#150, to-check=1636/6269)
+.opera/icons/tools.suckless.org.idx
+          73 100%    0.21kB/s    0:00:00          73 100%    0.21kB/s    0:00:00 (xfer#151, to-check=1633/6269)
+.opera/icons/translate.google.com.idx
+         477 100%    1.36kB/s    0:00:00         477 100%    1.36kB/s    0:00:00 (xfer#152, to-check=1624/6269)
+.opera/icons/twitter.com.idx
+        4808 100%   13.73kB/s    0:00:00        4808 100%   13.73kB/s    0:00:00 (xfer#153, to-check=1613/6269)
+.opera/icons/up3.viploader.net.idx
+         352 100%    1.01kB/s    0:00:00         352 100%    1.01kB/s    0:00:00 (xfer#154, to-check=1599/6269)
+.opera/icons/weather.yahoo.co.jp.idx
+          90 100%    0.26kB/s    0:00:00          90 100%    0.26kB/s    0:00:00 (xfer#155, to-check=1572/6269)
+.opera/icons/webcache.googleusercontent.com.idx
+       32521 100%   28.61kB/s    0:00:00       32521 100%   28.61kB/s    0:00:01 (xfer#156, to-check=1566/6269)
+.opera/icons/wikiwiki.jp.idx
+         562 100%    0.49kB/s    0:00:00         562 100%    0.49kB/s    0:00:01 (xfer#157, to-check=1546/6269)
+.opera/icons/www.47news.jp.idx
+        2946 100%    2.59kB/s    0:00:00        2946 100%    2.59kB/s    0:00:01 (xfer#158, to-check=1533/6269)
+.opera/icons/www.amazon.co.jp.idx
+        5532 100%    4.86kB/s    0:00:00        5532 100%    4.86kB/s    0:00:01 (xfer#159, to-check=1511/6269)
+.opera/icons/www.chunichi.co.jp.idx
+        1820 100%    1.60kB/s    0:00:00        1820 100%    1.60kB/s    0:00:01 (xfer#160, to-check=1464/6269)
+.opera/icons/www.dotup.org.idx
+        1856 100%    1.63kB/s    0:00:00        1856 100%    1.63kB/s    0:00:01 (xfer#161, to-check=1428/6269)
+.opera/icons/www.google.com.idx
+        2205 100%    1.94kB/s    0:00:00        2205 100%    1.94kB/s    0:00:01 (xfer#162, to-check=1370/6269)
+.opera/icons/www.jiji.com.idx
+        2808 100%    2.47kB/s    0:00:00        2808 100%    2.47kB/s    0:00:01 (xfer#163, to-check=1324/6269)
+.opera/icons/www.news-postseven.com.idx
+         547 100%    0.48kB/s    0:00:00         547 100%    0.48kB/s    0:00:01 (xfer#164, to-check=1239/6269)
+.opera/icons/www.nicovideo.jp.idx
+         822 100%    0.72kB/s    0:00:00         822 100%    0.72kB/s    0:00:01 (xfer#165, to-check=1236/6269)
+.opera/icons/www.nikkei.com.idx
+        1108 100%    0.97kB/s    0:00:00        1108 100%    0.97kB/s    0:00:01 (xfer#166, to-check=1232/6269)
+.opera/icons/www.nissen.co.jp.idx
+       32768  46%   28.52kB/s    0:00:01       65536  92%   56.99kB/s    0:00:00       71061 100%   61.79kB/s    0:00:01 (xfer#167, to-check=1226/6269)
+.opera/icons/www.nissen.jp.idx
+          86 100%   83.98kB/s    0:00:00          86 100%   83.98kB/s    0:00:00 (xfer#168, to-check=1225/6269)
+.opera/icons/www.ntwind.com.idx
+         101 100%   98.63kB/s    0:00:00         101 100%   98.63kB/s    0:00:00 (xfer#169, to-check=1220/6269)
+.opera/icons/www.s-manga.net.idx
+         151 100%  147.46kB/s    0:00:00         151 100%  147.46kB/s    0:00:00 (xfer#170, to-check=1158/6269)
+.opera/icons/www.sponichi.co.jp.idx
+        1529 100%    1.46MB/s    0:00:00        1529 100%    1.46MB/s    0:00:00 (xfer#171, to-check=1115/6269)
+.opera/icons/www.tokyo-np.co.jp.idx
+         751 100%  733.40kB/s    0:00:00         751 100%  733.40kB/s    0:00:00 (xfer#172, to-check=1100/6269)
+.opera/icons/zasshi.news.yahoo.co.jp.idx
+         240 100%  234.38kB/s    0:00:00         240 100%  234.38kB/s    0:00:00 (xfer#173, to-check=1008/6269)
+.opera/mail/
+.opera/mail/incoming2.txt
+        2096 100%   88.99kB/s    0:00:00        2096 100%   88.99kB/s    0:00:00 (xfer#174, to-check=1014/6282)
+.opera/mail/omailbase.dat
+       32768   2%    1.30MB/s    0:00:01     1572864 100%   19.74MB/s    0:00:00 (xfer#175, to-check=1012/6282)
+.opera/mail/imap/
+.opera/mail/imap/uid_account2
+        4096 100%   52.63kB/s    0:00:00        4096 100%   52.63kB/s    0:00:00 (xfer#176, to-check=1000/6282)
+.opera/mail/indexer/
+.opera/mail/indexer/indexer.axx
+       32768  25%  390.24kB/s    0:00:00      131072 100%    1.47MB/s    0:00:00 (xfer#177, to-check=1013/6296)
+.opera/mail/indexer/indexer.bx
+       32768  25%  310.68kB/s    0:00:00      131072 100%    1.18MB/s    0:00:00 (xfer#178, to-check=1012/6296)
+.opera/mail/indexer/message_id
+        4096 100%   37.74kB/s    0:00:00        4096 100%   37.74kB/s    0:00:00 (xfer#179, to-check=1011/6296)
+.opera/mail/lexicon/
+.opera/mail/lexicon/lexicon.axx
+       32768   3%  296.30kB/s    0:00:03     1048576 100%    7.19MB/s    0:00:00 (xfer#180, to-check=1010/6296)
+.opera/mail/lexicon/lexicon.bx
+       32768   0%  226.95kB/s    0:00:27     6291456 100%   17.91MB/s    0:00:00 (xfer#181, to-check=1009/6296)
+.opera/pstorage/00/01/
+.opera/pstorage/00/01/00000000
+       29185 100%    0.00kB/s    0:00:00       29185 100%    0.00kB/s    0:00:00 (xfer#182, to-check=1060/6461)
+.opera/pstorage/00/08/
+.opera/pstorage/00/08/00000003
+         219 100%  213.87kB/s    0:00:00         219 100%  213.87kB/s    0:00:00 (xfer#183, to-check=1047/6461)
+.opera/sessions/
+.opera/sessions/autosave.win
+         840 100%    0.00kB/s    0:00:00         840 100%    0.00kB/s    0:00:00 (xfer#184, to-check=1015/7014)
+.opera/sessions/autosave.win.bak
+        1147 100%    1.09MB/s    0:00:00        1147 100%    1.09MB/s    0:00:00 (xfer#185, to-check=1014/7014)
+.opera/temporary_downloads/
+deleting .opera/temporary_downloads/override_downloaded.ini
+.opera/tmp/
+.opera/toolbar/
+.opera/vps/
+deleting .opera/vps/0003/wb.vx
+deleting .opera/vps/0003/w.axx
+deleting .opera/vps/0003/url.axx
+deleting .opera/vps/0003/md.dat
+deleting .opera/vps/0003/adoc.bx
+deleting .opera/vps/0003/
+.opera/vps/0001/
+.opera/vps/0001/adoc.bx
+        4096 100%   11.24kB/s    0:00:00        4096 100%   11.24kB/s    0:00:00 (xfer#186, to-check=1004/7049)
+.opera/vps/0001/md.dat
+       12288 100%   33.71kB/s    0:00:00       12288 100%   33.71kB/s    0:00:00 (xfer#187, to-check=1003/7049)
+.opera/vps/0001/url.axx
+        8192 100%   22.41kB/s    0:00:00        8192 100%   22.41kB/s    0:00:00 (xfer#188, to-check=1002/7049)
+.opera/vps/0001/w.axx
+        8192 100%   20.51kB/s    0:00:00        8192 100%   20.46kB/s    0:00:00 (xfer#189, to-check=1001/7049)
+.opera/vps/0001/wb.vx
+        4096 100%   10.23kB/s    0:00:00        4096 100%   10.23kB/s    0:00:00 (xfer#190, to-check=1000/7049)
+.opera/vps/0002/
+.opera/vps/0002/adoc.bx
+        4096 100%    7.95kB/s    0:00:00        4096 100%    7.95kB/s    0:00:00 (xfer#191, to-check=1004/7054)
+.opera/vps/0002/md.dat
+       32768  25%   63.37kB/s    0:00:01      131072 100%  251.97kB/s    0:00:00 (xfer#192, to-check=1003/7054)
+.opera/vps/0002/url.axx
+        8192 100%   15.75kB/s    0:00:00        8192 100%   15.75kB/s    0:00:00 (xfer#193, to-check=1002/7054)
+.opera/vps/0002/w.axx
+       32768   6%   62.75kB/s    0:00:07      524288 100%  975.24kB/s    0:00:00 (xfer#194, to-check=1001/7054)
+.opera/vps/0002/wb.vx
+       32768   1%   60.84kB/s    0:00:33     2097152 100%    3.39MB/s    0:00:00 (xfer#195, to-check=1000/7054)
+.opera/vps/0004/
+.opera/vps/0004/adoc.bx
+        4096 100%    5.55kB/s    0:00:00        4096 100%    5.55kB/s    0:00:00 (xfer#196, to-check=1004/7059)
+.opera/vps/0004/md.dat
+       32768  25%   44.32kB/s    0:00:02      131072 100%  176.55kB/s    0:00:00 (xfer#197, to-check=1003/7059)
+.opera/vps/0004/url.axx
+        8192 100%   11.02kB/s    0:00:00        8192 100%   11.02kB/s    0:00:00 (xfer#198, to-check=1002/7059)
+.opera/vps/0004/w.axx
+       32768   4%   43.96kB/s    0:00:17      786432 100% 1022.64kB/s    0:00:00 (xfer#199, to-check=1001/7059)
+.opera/vps/0004/wb.vx
+       32768   1%   42.55kB/s    0:01:13     3145728 100%    3.54MB/s    0:00:00 (xfer#200, to-check=1000/7059)
+.opera/vps/0005/
+.opera/vps/0005/adoc.bx
+        4096 100%    4.07kB/s    0:00:00        4096 100%    4.07kB/s    0:00:00 (xfer#201, to-check=1004/7064)
+.opera/vps/0005/md.dat
+       32768  25%   32.23kB/s    0:00:03      131072 100%  128.51kB/s    0:00:00 (xfer#202, to-check=1003/7064)
+.opera/vps/0005/url.axx
+        8192 100%    7.98kB/s    0:00:00        8192 100%    7.98kB/s    0:00:01 (xfer#203, to-check=1002/7064)
+.opera/vps/0005/w.axx
+       32768   4%   31.43kB/s    0:00:23       65536   8%   62.81kB/s    0:00:11      786432 100%  738.46kB/s    0:00:01 (xfer#204, to-check=1001/7064)
+.opera/vps/0005/wb.vx
+       32768   1%  842.11kB/s    0:00:03     3145728 100%   22.06MB/s    0:00:00 (xfer#205, to-check=1000/7064)
+.opera/vps/0006/
+.opera/vps/0006/adoc.bx
+        4096 100%   18.10kB/s    0:00:00        4096 100%   18.10kB/s    0:00:00 (xfer#206, to-check=1004/7069)
+.opera/vps/0006/md.dat
+       32768  33%  137.93kB/s    0:00:00       98304 100%  410.26kB/s    0:00:00 (xfer#207, to-check=1003/7069)
+.opera/vps/0006/url.axx
+        8192 100%   34.04kB/s    0:00:00        8192 100%   34.04kB/s    0:00:00 (xfer#208, to-check=1002/7069)
+.opera/vps/0006/w.axx
+       32768   4%  124.51kB/s    0:00:06      786432 100%    2.69MB/s    0:00:00 (xfer#209, to-check=1001/7069)
+.opera/vps/0006/wb.vx
+       32768   1%  111.89kB/s    0:00:18     2097152 100%    5.54MB/s    0:00:00 (xfer#210, to-check=1000/7069)
+.opera/vps/0007/
+.opera/vps/0007/adoc.bx
+        4096 100%    7.94kB/s    0:00:00        4096 100%    7.94kB/s    0:00:00 (xfer#211, to-check=1023/7093)
+.opera/vps/0007/md.dat
+       32768  16%   62.14kB/s    0:00:02      196608 100%  369.23kB/s    0:00:00 (xfer#212, to-check=1022/7093)
+.opera/vps/0007/url.axx
+        8192 100%   15.04kB/s    0:00:00        8192 100%   15.04kB/s    0:00:00 (xfer#213, to-check=1021/7093)
+.opera/vps/0007/w.axx
+       32768   4%   58.29kB/s    0:00:12      786432 100%    1.31MB/s    0:00:00 (xfer#214, to-check=1020/7093)
+.opera/vps/0007/wb.vx
+       32768   1%   54.79kB/s    0:00:56     3145728 100%    4.34MB/s    0:00:00 (xfer#215, to-check=1019/7093)
+.opera/vps/0008/
+.opera/vps/0008/adoc.bx
+        4096 100%    5.77kB/s    0:00:00        4096 100%    5.77kB/s    0:00:00 (xfer#216, to-check=1018/7093)
+.opera/vps/0008/md.dat
+       32768  12%   45.26kB/s    0:00:05      262144 100%  358.54kB/s    0:00:00 (xfer#217, to-check=1017/7093)
+.opera/vps/0008/url.axx
+        8192 100%   11.13kB/s    0:00:00        8192 100%   11.13kB/s    0:00:00 (xfer#218, to-check=1016/7093)
+.opera/vps/0008/w.axx
+       32768   4%   43.54kB/s    0:00:17      786432 100% 1013.19kB/s    0:00:00 (xfer#219, to-check=1015/7093)
+.opera/vps/0008/wb.vx
+       32768   1%   41.88kB/s    0:01:14     3145728 100%    3.47MB/s    0:00:00 (xfer#220, to-check=1014/7093)
+.opera/vps/0009/
+.opera/vps/0009/adoc.bx
+        4096 100%    4.62kB/s    0:00:00        4096 100%    4.62kB/s    0:00:00 (xfer#221, to-check=1013/7093)
+.opera/vps/0009/md.dat
+       32768  16%   36.66kB/s    0:00:04      196608 100%  215.97kB/s    0:00:00 (xfer#222, to-check=1012/7093)
+.opera/vps/0009/url.axx
+        8192 100%    8.96kB/s    0:00:00        8192 100%    8.96kB/s    0:00:00 (xfer#223, to-check=1011/7093)
+.opera/vps/0009/w.axx
+       32768   4%   35.01kB/s    0:00:21      786432 100%  820.51kB/s    0:00:00 (xfer#224, to-check=1010/7093)
+.opera/vps/0009/wb.vx
+       32768   1%   33.93kB/s    0:01:31      819200  26%  800.00kB/s    0:00:02     3145728 100%    2.81MB/s    0:00:01 (xfer#225, to-check=1009/7093)
+.opera/vps/0010/
+.opera/vps/0010/adoc.bx
+        4096 100%   57.14kB/s    0:00:00        4096 100%   57.14kB/s    0:00:00 (xfer#226, to-check=1008/7093)
+.opera/vps/0010/md.dat
+       32768  12%  340.43kB/s    0:00:00      262144 100%    2.48MB/s    0:00:00 (xfer#227, to-check=1007/7093)
+.opera/vps/0010/url.axx
+        8192 100%   78.43kB/s    0:00:00        8192 100%   78.43kB/s    0:00:00 (xfer#228, to-check=1006/7093)
+.opera/vps/0010/w.axx
+       32768   4%  250.00kB/s    0:00:03      786432 100%    5.00MB/s    0:00:00 (xfer#229, to-check=1005/7093)
+.opera/vps/0010/wb.vx
+       32768   1%  196.32kB/s    0:00:15     3145728 100%   11.54MB/s    0:00:00 (xfer#230, to-check=1004/7093)
+.ssh/
+.ssh/known_hosts
+         402 100%    0.39kB/s    0:00:00         402 100%    0.39kB/s    0:00:00 (xfer#231, to-check=1001/7119)
+Documents/commands of rsync between host and vaionote.html
+         964 100%    0.84kB/s    0:00:00         964 100%    0.84kB/s    0:00:01 (xfer#232, to-check=1023/7146)
+Documents/homepage/My Bookmarks.htm
+       32768  54%   28.29kB/s    0:00:00       59639 100%   51.50kB/s    0:00:00       59639 100%   51.50kB/s    0:00:01 (xfer#233, to-check=1013/7146)
+Documents/registration/
+Documents/registration/registration.html
+       32768  93%  198.76kB/s    0:00:00       34983 100%  212.19kB/s    0:00:00 (xfer#234, to-check=1028/7194)
+Documents/registration/registration.html.bak
+       32768  93%  196.32kB/s    0:00:00       34983 100%  209.59kB/s    0:00:00 (xfer#235, to-check=1027/7194)
+Documents/settings/linux-configurations/
+deleting Documents/settings/linux-configurations/funtooHomeBackup-2012-0514-101629.log
+Documents/settings/linux-configurations/funtooHomeBackup-2012-0514-101629.log.xz
+       32768   4%    0.00kB/s    0:00:00

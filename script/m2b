@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+#m2b
+
+cd $HOME/Downloads/windows/git/merikens-2ch-browser/merikens-2ch-browser
+java -jar ./merikens-2ch-browser.jar

@@ -1,6 +1,4 @@
-#!/bin/sh
+#!/bin/fish
 
-# ntpclient -c 1 -s ntp1.eonet.ne.jp
-# ntpclient -c 1 -s ntp2.eonet.ne.jp
-ntpclient -c 1 -s ntp.jst.mfeed.ad.jp
+ntpclient -s -c 3 -q 50 jp.pool.ntp.org
 hwclock --systohc

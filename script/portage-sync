@@ -1,0 +1,4 @@
+# /etc/cron.d/funtoo-portage-sync
+# Funtoo Portage Git Mirror Sync
+
+09 10-22/6 * * * test -x /usr/local/sbin/funtoo-portage-sync.sh && /usr/local/sbin/funtoo-portage-sync.sh

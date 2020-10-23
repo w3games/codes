@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+#VSCode.sh
+
+cd /usr/local/share/VSCode
+./Code

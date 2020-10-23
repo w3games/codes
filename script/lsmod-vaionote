@@ -1,0 +1,153 @@
+Module                  Size  Used by
+ipv6                  188612  10 
+pcnet_cs               23853  1 
+8390                    5033  1 pcnet_cs
+hid_logitech_dj         7116  0 
+yenta_socket           15784  0 
+pcmcia_rsrc             5693  1 yenta_socket
+thermal                 6596  0 
+processor              23351  1 
+fan                     1765  0 
+irda                   71266  0 
+crc_ccitt                999  1 irda
+thermal_sys            12644  3 fan,thermal,processor
+floppy                 41080  0 
+button                  3333  0 
+battery                 5217  0 
+xts                     2107  0 
+gf128mul                4922  1 xts
+sha256_generic          8884  0 
+tg3                   113426  0 
+hwmon                    857  2 tg3,thermal_sys
+libphy                 13596  1 tg3
+ptp                     5372  1 tg3
+pps_core                4553  1 ptp
+e1000                  78547  0 
+fuse                   53437  0 
+xfs                   425146  0 
+exportfs                2474  1 xfs
+jfs                   130151  0 
+reiserfs              172516  0 
+ext4                  251657  0 
+jbd2                   40826  1 ext4
+ext3                   92116  0 
+jbd                    31502  1 ext3
+multipath               4308  0 
+linear                  2827  0 
+raid10                 32774  0 
+raid456                45237  0 
+async_pq                2763  1 raid456
+async_xor               2021  2 async_pq,raid456
+async_memcpy             858  1 raid456
+async_raid6_recov        881  1 raid456
+async_tx                1266  5 async_pq,raid456,async_xor,async_memcpy,async_raid6_recov
+raid1                  20586  0 
+raid0                   6311  0 
+dm_snapshot            21491  0 
+dm_crypt               10456  0 
+dm_mirror               9482  0 
+dm_region_hash          4903  1 dm_mirror
+dm_log                  6136  2 dm_region_hash,dm_mirror
+dm_mod                 49994  4 dm_log,dm_mirror,dm_crypt,dm_snapshot
+hid_sunplus              960  0 
+hid_sony                2167  0 
+hid_samsung             2181  0 
+hid_pl                   848  0 
+hid_petalynx            1349  0 
+hid_gyration            1523  0 
+sl811_hcd               7543  0 
+ohci_hcd               15262  0 
+uhci_hcd               15722  0 
+usb_storage            32009  0 
+mpt2sas               102729  0 
+raid_class              2196  1 mpt2sas
+aic94xx                55047  0 
+libsas                 47443  1 aic94xx
+qla2xxx               374086  0 
+megaraid_sas           54203  0 
+megaraid_mbox          20791  0 
+megaraid_mm             5406  1 megaraid_mbox
+megaraid               29380  0 
+aacraid                56928  0 
+sx8                     9331  0 
+DAC960                 53758  0 
+hpsa                   35488  0 
+cciss                  35430  0 
+3w_9xxx                24074  0 
+3w_xxxx                18303  0 
+mptsas                 38930  0 
+scsi_transport_sas     16366  4 mpt2sas,libsas,mptsas,aic94xx
+mptfc                  10169  0 
+scsi_transport_fc      30430  2 qla2xxx,mptfc
+scsi_tgt                6640  1 scsi_transport_fc
+mptspi                 11433  0 
+mptscsih               20690  3 mptfc,mptsas,mptspi
+mptbase                67141  4 mptfc,mptsas,mptspi,mptscsih
+atp870u                20719  0 
+dc395x                 23457  0 
+qla1280                16746  0 
+dmx3191d                7538  0 
+sym53c8xx              54548  0 
+gdth                   67292  0 
+advansys               39284  0 
+initio                 12600  0 
+BusLogic               16564  0 
+arcmsr                 20398  0 
+aic7xxx                90001  0 
+aic79xx               102673  0 
+scsi_transport_spi     14926  5 mptspi,sym53c8xx,aic79xx,aic7xxx,dmx3191d
+sg                     19682  0 
+pdc_adma                3793  0 
+sata_inic162x           5017  0 
+sata_mv                18702  0 
+ata_piix               18303  2 
+ahci                   18660  0 
+libahci                14576  1 ahci
+sata_qstor              3748  0 
+sata_vsc                2801  0 
+sata_uli                1980  0 
+sata_sis                2593  0 
+sata_sx4                6447  0 
+sata_nv                14154  0 
+sata_via                5123  0 
+sata_svw                3033  0 
+sata_sil24              8091  0 
+sata_sil                5351  0 
+sata_promise            7115  0 
+pata_sl82c105           2429  0 
+pata_cs5530             3076  0 
+pata_cs5520             2558  0 
+pata_via                6432  0 
+pata_jmicron            1455  0 
+pata_marvell            1843  0 
+pata_sis                6670  1 sata_sis
+pata_netcell            1281  0 
+pata_sc1200             1950  0 
+pata_pdc202xx_old       2942  0 
+pata_triflex            1967  0 
+pata_atiixp             3259  0 
+pata_opti               1725  0 
+pata_amd                6647  0 
+pata_ali                6297  0 
+pata_it8213             2338  0 
+pata_pcmcia             6588  0 
+pcmcia                 24311  2 pcnet_cs,pata_pcmcia
+pcmcia_core             8355  3 pcmcia,pcmcia_rsrc,yenta_socket
+pata_ns87415            2152  0 
+pata_ns87410            1776  0 
+pata_serverworks        3556  0 
+pata_artop              3310  0 
+pata_it821x             6185  0 
+pata_optidma            3041  0 
+pata_hpt3x2n            3928  0 
+pata_hpt3x3             1956  0 
+pata_hpt37x             7697  0 
+pata_hpt366             3640  0 
+pata_cmd64x             4466  0 
+pata_efar               2470  0 
+pata_rz1000             1745  0 
+pata_sil680             3349  0 
+pata_radisys            1922  0 
+pata_pdc2027x           4431  0 
+pata_mpiix              1842  0 
+libata                117887  52 ahci,pata_pdc202xx_old,sata_inic162x,pata_efar,pata_opti,sata_sil,sata_sis,sata_sx4,sata_svw,sata_uli,sata_via,sata_vsc,pata_marvell,sata_promise,sata_mv,sata_nv,libahci,sata_qstor,sata_sil24,pata_netcell,pata_ali,pata_amd,pata_sis,pata_via,pata_sl82c105,pata_triflex,pata_ns87410,pata_ns87415,libsas,pdc_adma,pata_artop,pata_atiixp,pata_mpiix,pata_cmd64x,pata_cs5520,pata_cs5530,pata_hpt3x2n,pata_optidma,pata_hpt366,pata_hpt37x,pata_hpt3x3,pata_it8213,pata_it821x,pata_serverworks,pata_pcmcia,pata_sc1200,pata_sil680,pata_rz1000,ata_piix,pata_jmicron,pata_radisys,pata_pdc2027x

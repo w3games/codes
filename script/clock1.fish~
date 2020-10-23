@@ -1,0 +1,10 @@
+#!/bin/fish
+#
+# clock.fish
+
+while sleep 30
+	tput sc
+	tput cup 0 (math (tput cols)-16)
+	date +"%a %b%e, %H:%M"
+	tput rc
+end

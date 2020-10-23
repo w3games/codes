@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+#pmsuspend
+
+sleep 40
+pm-suspend

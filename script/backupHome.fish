@@ -22,10 +22,9 @@ rsync -ahAHSX \
       --exclude leaf/.git/ \
       --exclude leaf/.wine \
       --exclude leaf/.wine/ \
+      --exclude leaf/.wine_games/ \
       --exclude ftps/ \
       --exclude gits/ \
-      --exclude mirrors/ \
-      --exclude tmp/ \
       --info=progress2 \
       --log-file=/var/log/rsync.log \
       /home/ $BACKUP/

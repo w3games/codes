@@ -1,0 +1,61 @@
+#!/usr/bin/php
+<?php
+$options = getopt("i:s:t:hv", array("help"));
+
+foreach (array_keys($options) as $opts) switch ($opts) {
+	case 'h':
+		print_help_message();
+		exit(1);
+	case 'v':
+		print_version_message();
+		exit(1);
+	case 'help':
+		print_help_message();
+		exit(1);
+	default:
+		main();
+		exit(0);
+}
+
+function main() { 
+	global $options;
+	$api_dev_key = 'a4582d751f7b2b5a3121936cbe5e45bf';
+	$api_paste_code = file_get_contents($options["i"]);
+	$api_paste_private = '2'; // 0=public 1=unlisted 2=private
+	$api_paste_name = $options["t"];
+	$api_paste_expire_date = 'N'; // Never 10M 1H 1D 1W 2W 1M
+	$api_paste_format = $options["s"];
+	$api_user_key = '9430d755a9448dd561e6694d94f2ab69';
+	// $api_results_limit = '100';
+	// $api_user_name = 'w3game';
+	// $api_user_password = 'jfieow';
+	// $api_user_name = urlencode($api_user_name);
+	// $api_user_password = urlencode($api_user_password);
+	$api_paste_name = urlencode($api_paste_name);
+	$api_paste_code = urlencode($api_paste_code);
+	
+	$url = 'http://pastebin.com/api/api_post.php';
+	// $url = 'http://pastebin.com/api/api_login.php';
+	$ch = curl_init($url);
+	
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, 'api_option=paste&api_user_key='.$api_user_key.'&api_paste_private='.$api_paste_private.'&api_paste_name='.$api_paste_name.'&api_paste_expire_date='.$api_paste_expire_date.'&api_paste_format='.$api_paste_format.'&api_dev_key='.$api_dev_key.'&api_paste_code='.$api_paste_code.'');
+	// curl_setopt($ch, CURLOPT_POSTFIELDS, 'api_dev_key='.$api_dev_key.'&api_user_name='.$api_user_name.'&api_user_password='.$api_user_password.''); 
+	// curl_setopt($ch, CURLOPT_POSTFIELDS, 'api_option=list&api_user_key='.$api_user_key.'&api_dev_key='.$api_dev_key.'&api_results_limit='.$api_results_limit.'');
+	// curl_setopt($ch, CURLOPT_POSTFIELDS, 'api_option=trends&api_dev_key='.$api_dev_key.'');
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_VERBOSE, 1);
+	curl_setopt($ch, CURLOPT_NOBODY, 0);
+	
+	$response = curl_exec($ch);
+	echo $response;
+}
+
+function print_help_message() {
+	echo "command options\n --help -h\n\tthis Help\n -i\n\tInput file\n -s\n\tSyntax\n -t\n\tTitle\n -v\n\tVersion";
+}
+
+function print_version_message() {
+	echo "version 1.0";
+}
+?>

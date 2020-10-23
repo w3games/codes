@@ -1,0 +1,22 @@
+--- linux-2.6.34-gentoo/include/linux/input.h	2010-05-16 22:17:36.000000000 +0100
++++ linux-2.6.34-gentoo-msnekpatch/include/linux/input.h	2010-05-28 03:33:55.000000000 +0100
+@@ -520,8 +520,8 @@
+ #define KEY_TWEN		0x19f
+ #define KEY_VIDEOPHONE		0x1a0	/* Media Select Video Phone */
+ #define KEY_GAMES		0x1a1	/* Media Select Games */
+-#define KEY_ZOOMIN		0x1a2	/* AC Zoom In */
+-#define KEY_ZOOMOUT		0x1a3	/* AC Zoom Out */
++#define KEY_ZOOMIN		0x0f6	/* AC Zoom In == 246 */
++#define KEY_ZOOMOUT		0x0f7	/* AC Zoom Out == 247  */
+ #define KEY_ZOOMRESET		0x1a4	/* AC Zoom */
+ #define KEY_WORDPROCESSOR	0x1a5	/* AL Word Processor */
+ #define KEY_EDITOR		0x1a6	/* AL Text Editor */
+@@ -534,7 +534,7 @@
+ #define KEY_ADDRESSBOOK		0x1ad	/* AL Contacts/Address Book */
+ #define KEY_MESSENGER		0x1ae	/* AL Instant Messaging */
+ #define KEY_DISPLAYTOGGLE	0x1af	/* Turn display (LCD) on and off */
+-#define KEY_SPELLCHECK		0x1b0   /* AL Spell Check */
++#define KEY_SPELLCHECK		0x0eb   /* AL Spell Check == 235 */
+ #define KEY_LOGOFF		0x1b1   /* AL Logoff */
+ 
+ #define KEY_DOLLAR		0x1b2

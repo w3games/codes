@@ -1,0 +1,40 @@
+#!/bin/fish
+#rsyncFromWindows.fish
+
+if not set -q SUDO_USER >/dev/null
+      set SUDO_USER leaf
+end
+
+set WINDIR  /mnt/windows
+set WINUSER leaf
+
+if not test -d $WINDIR
+   mkdir $WINDIR
+end
+
+mountpoint -q $WINDIR; or mount $WINDIR
+
+for i in Documents Pictures Music
+    echo \n"Syncing $i from Windows to Funtoo"
+    rsync -ahvAHS \
+	  --delete \
+	  --exclude desktop.ini \
+	  --exclude Thumbs.db \
+	  $WINDIR/Users/$WINUSER/$i/ /home/$SUDO_USER/$i/
+end
+echo \n"Syncing Downloads from Windows to Funtoo"
+rsync -ahvAHSX \
+      --delete \
+      --exclude desktop.ini \
+      --exclude Thumbs.db \
+      $WINDIR/Users/$WINUSER/Downloads/ /home/$SUDO_USER/Downloads/windows/
+
+find /home/$SUDO_USER/Documents/scripts/ \
+     -type f \
+     -name '*.tar.*' \
+     -o -name '.keep_sys-apps_baselayout-0' \
+     -prune \
+     -o -exec chmod +x '{}' \;
+
+umount $WINDIR
+rmdir  $WINDIR

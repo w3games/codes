@@ -1,0 +1,8 @@
+#!/bin/fish
+#
+#backupHome
+
+set i phenom2
+set BACKUP root@pentium4:/mnt/home-$i
+
+rsync -ahzAHSX --del --exclude leaf/.cache/ --info=progress2 --log=/var/log/rsync.log /home/ $BACKUP/

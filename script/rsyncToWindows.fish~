@@ -1,0 +1,33 @@
+#!/bin/fish
+#rsyncToWindows.fish
+
+if not set -q SUDO_USER >/dev/null
+      set SUDO_USER leaf
+end
+
+set WINDIR  /mnt/windows
+set WINUSER leaf
+
+if not test -d $WINDIR
+   mkdir $WINDIR
+end
+
+mountpoint -q $WINDIR; or sudo mount $WINDIR
+
+for i in Documents Pictures Music
+    echo \n"Syncing $i from Linux to Windows"
+    rsync -ahvAHSX \
+	  --delete \
+	  --exclude desktop.ini \
+	  --exclude Thumbs.db \
+	  /home/$SUDO_USER/$i/ $WINDIR/Users/$WINUSER/$i/
+end
+echo \n"Syncing Downloads from Linux to Windows"
+rsync -ahvAHSX \
+      --delete \
+      --exclude desktop.ini \
+      --exclude Thumbs.db \
+      /home/$SUDO_USER/Downloads/windows/ $WINDIR/Users/$WINUSER/Downloads/
+
+umount $WINDIR
+rmdir  $WINDIR

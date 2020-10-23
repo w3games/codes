@@ -1,0 +1,17 @@
+#!/bin/fish
+#rsyncFromRamdiskToDisk
+
+set APPDATA		/dev/shm/APPDATA
+set FLASH_PLAYER	$HOME/.macromedia/Flash_Player
+set OPERA		$HOME/.opera/cache
+set FIREFOX		$HOME/.cache/mozilla/firefox
+set GOOGLE		$HOME/.cache/google-chrome/Default
+set CHROMIUM		$HOME/.cache/chromium/Default
+set CRONTAB		$HOME/Documents/settings/linux-configurations
+
+set ITEMS		FLASH_PLAYER OPERA CHROMIUM FIREFOX
+
+for i in (seq (count $$ITEMS))
+    echo -e (date +%T.%N | cut -c-12) Syncing Cache from $APPDATA/$ITEMS[$i]/ to $$ITEMS[$i]/
+    rsync -a --delete $APPDATA/$ITEMS[$i]/ $$ITEMS[$i]/ ;
+end

@@ -1,0 +1,5 @@
+#!/bin/bash
+#runescape
+
+cd /usr/local/share/runescape
+exec ./runescape &

@@ -1,0 +1,5 @@
+#!/bin/bash
+#v2c
+
+cd /usr/local/share/v2c
+exec ./v2c &

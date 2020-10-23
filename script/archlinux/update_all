@@ -1,0 +1,10 @@
+#!/usr/bin/sh
+# update.sh
+
+yaourt -Syuu --noconfirm
+cd ~/abs
+yaourt -G linux
+echo
+echo "uname -r & abs linux version"
+uname -r
+grep '^pkg[ver|rel]' linux/PKGBUILD | cut -d = -f 2 | paste -s -d -

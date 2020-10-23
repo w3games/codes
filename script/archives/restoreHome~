@@ -1,0 +1,16 @@
+#!/bin/fish
+#
+#restoreHome
+
+set i windows
+set j w3game
+
+if not mountpoint -q /mnt/$i
+   mount /mnt/$i
+end
+
+for k in Documents Pictures
+    rsync -ahAHSX --info=progress2 --del --exclude desktop.ini --exclude Thumbs.db /mnt/$i/Users/$j/$k/ /home/leaf/$k/
+end
+
+umount /mnt/$i

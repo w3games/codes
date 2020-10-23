@@ -1,0 +1,37 @@
+#!/bin/bash
+i3status | while :
+do
+	read line
+	id=$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')
+	name=$(xprop -id $id | awk '/_NET_WM_NAME/{$1=$2="";print}' | cut -d'"' -f2)
+	up=$(uptime -p)
+
+# 	mydate()
+# 		{
+# 		  datePart=$( date +'%x %A' )  
+# 		  echo " $datePart "
+# 		}
+# 
+# 	mytime()
+# 		{
+# 		  hh=$( date +'%H')
+# 		  mm=$( date +'%M')
+# 		  ss=$( date +'%S')
+# 		  timePart=( $hh:$mm:$ss )
+# 		  echo " $timePart "
+# 		}
+# 
+# 	myloadavg()
+# 		{
+# 		  cut -d ' ' -f1,2,3 /proc/loadavg 
+# 		}
+# 
+# 	myuptime()
+# 		{
+# 		  uptime -p
+# 		}
+# 
+# 	echo "$name | $(myloadavg) |$(mydate)$(mytime) $line" || exit 1
+
+	echo "$name | $up | $line" || exit 1
+done

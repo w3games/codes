@@ -1,0 +1,65 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:		httpd
+# Required-Start:	$remote_fs $syslog
+# Required-Stop:	$remote_fs $syslog
+# Default-Start:	2 3 4 5
+# Default-Stop:		
+# Short-Description:	BusyBox HTTP Server
+### END INIT INFO
+
+set -e
+
+# /etc/init.d/httpd: start and stop the BusyBox HTTP daemon
+
+umask 022
+
+# Get lsb functions
+. /lib/lsb/init-functions
+
+init() {
+	HTTPD="/bin/busybox httpd"
+	HTTPD_OPTS="-c /etc/httpd.conf"
+}
+
+# Are we running from init?
+run_by_init() {
+    ([ "$previous" ] && [ "$runlevel" ]) || [ "$runlevel" = S ]
+}
+
+case "$1" in
+  start)
+	init
+	log_daemon_msg "Starting BusyBox HTTP Server"
+	start-stop-daemon --start --quiet --oknodo --exec $HTTPD -- $HTTPD_OPTS
+	/usr/bin/pgrep -x -u 0 -P 1 busybox > /var/run/busybox-httpd.pid
+	;;
+  stop)
+	log_daemon_msg "Stopping BusyBox HTTP Server"
+	start-stop-daemon --stop --quiet --oknodo --pidfile /var/run/busybox-httpd.pid
+	;;
+
+  reload|force-reload)
+	init
+	log_daemon_msg "Reloading BusyBox HTTP Server's configuration"
+	start-stop-daemon --stop --signal 1 --quiet --oknodo --pidfile /var/run/busybox-httpd.pid --exec $HTTPD -- $HTTPD_OPTS
+	;;
+
+  restart)
+	$0 stop
+	sleep 1
+	$0 start
+	;;
+
+  status)
+	init
+	status_of_proc -p /var/run/busybox-httpd.pid $HTTPD && exit 0 || exit $?
+	;;
+
+  *)
+	log_action_msg "Usage: /etc/init.d/ssh {start|stop|reload|force-reload|restart||status}"
+	exit 1
+esac
+
+exit 0

@@ -1,0 +1,20 @@
+#!/bin/fish
+#
+#backupBcache.sh
+
+set BackupDirectory leaf-cache
+set BackupDevice bcache0
+
+if mountpoint -q /home/leaf/.cache
+   umount /home/leaf/.cache
+end
+
+if not mountpoint -q /mnt/$BackupDirectory-$BackupDevice
+    mount -o defaults,subvol=leaf-cache /dev/bcache0 /mnt/$BackupDirectory-$BackupDevice
+end
+
+rsync -ahAHSX --info=progress2 --del /mnt/$BackupDirectory-$BackupDevice/ /home/leaf/.cache/
+
+umount /mnt/$BackupDirectory-$BackupDevice
+
+mount /home/leaf/.cache
